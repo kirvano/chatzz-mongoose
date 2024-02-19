@@ -1,6 +1,6 @@
-const mongoose = require("../../database");
+const mongoose = require("mongoose");
 
-const Plan = mongoose.Schema(
+const PlanSchema = new mongoose.Schema(
   {
     name: { type: String },
     description: { type: String },
@@ -61,5 +61,5 @@ const Plan = mongoose.Schema(
   },
   { timestamps: true }
 );
-
-module.exports = mongoose.model("Plan", Plan);
+const Plan = mongoose.model("Plan", PlanSchema);
+module.exports = Plan;

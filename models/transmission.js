@@ -1,24 +1,24 @@
-const mongoose = require('../../database');
+const mongoose = require("mongoose");
 
 const TransmissionSchema = new mongoose.Schema(
-    {
-        userId: {
-            type: String,
-        },
-        phoneNumbers: {
-            type: Array,
-        },        
-        name: {
-            type: String,
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-        },
+  {
+    userId: {
+      type: String,
     },
-    { timestamps: true }
+    phoneNumbers: {
+      type: Array,
+    },
+    name: {
+      type: String,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  { timestamps: true }
 );
 
-const Transmission = mongoose.model('Transmission', TransmissionSchema);
+const Transmission = mongoose.model("Transmission", TransmissionSchema);
 
 module.exports = Transmission;

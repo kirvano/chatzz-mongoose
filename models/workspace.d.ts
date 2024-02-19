@@ -1,3 +1,27 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/callback" />
+/// <reference types="mongoose/types/collection" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/expressions" />
+/// <reference types="mongoose/types/helpers" />
+/// <reference types="mongoose/types/middlewares" />
+/// <reference types="mongoose/types/indexes" />
+/// <reference types="mongoose/types/models" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/populate" />
+/// <reference types="mongoose/types/query" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose/types/schematypes" />
+/// <reference types="mongoose/types/session" />
+/// <reference types="mongoose/types/types" />
+/// <reference types="mongoose/types/utility" />
+/// <reference types="mongoose/types/validation" />
+/// <reference types="mongoose/types/virtuals" />
+/// <reference types="mongoose/types/inferschematype" />
 export = Workspace;
 declare const Workspace: mongoose.Model<{
     createdAt: NativeDate;
@@ -20,7 +44,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -56,8 +80,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -104,6 +128,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -146,7 +171,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -172,7 +196,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -208,8 +232,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -256,6 +280,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -298,7 +323,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -324,7 +348,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -360,8 +384,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -408,6 +432,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -450,7 +475,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -480,7 +504,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -516,8 +540,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -564,6 +588,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -606,7 +631,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -632,7 +656,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -668,8 +692,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -716,6 +740,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -758,7 +783,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -784,7 +808,7 @@ declare const Workspace: mongoose.Model<{
         name?: string | null | undefined;
         flow?: string | null | undefined;
     }>;
-    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "blocked" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired";
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -820,8 +844,8 @@ declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         execution: number;
-        situation?: Date | null | undefined;
         condition?: string | null | undefined;
+        situation?: Date | null | undefined;
         keyword?: string | null | undefined;
         conversationflow?: string | null | undefined;
     }>;
@@ -868,6 +892,7 @@ declare const Workspace: mongoose.Model<{
     email?: string | null | undefined;
     document?: string | null | undefined;
     phoneNumber?: string | null | undefined;
+    stripeCustomerId?: string | null | undefined;
     plan?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -910,7 +935,6 @@ declare const Workspace: mongoose.Model<{
         main?: any;
         afk?: any;
     }) | null | undefined;
-    stripeCustomerId?: string | null | undefined;
     instance?: string | null | undefined;
     picture?: string | null | undefined;
     endsTrial?: Date | null | undefined;
@@ -918,4 +942,4 @@ declare const Workspace: mongoose.Model<{
 }> & {
     _id: mongoose.Types.ObjectId;
 }>>;
-import { default as mongoose } from "mongoose";
+import mongoose = require("mongoose");

@@ -1,5 +1,4 @@
-const mongoose = require("../../database");
-const WorkspaceSchema = require("./workspace");
+const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema(
   {

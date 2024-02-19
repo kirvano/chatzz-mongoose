@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:types": "rm models/*.d.ts && tsc --declaration --allowJs --emitDeclarationOnly --outDir models"
+    "generate:types": "rm -f models/*.d.ts && tsc --declaration --allowJs --emitDeclarationOnly --outDir models"
   },
   "author": "",
   "license": "ISC",
