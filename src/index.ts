@@ -1,4 +1,4 @@
-export * as mongoose from "mongoose";
+export { default as mongoose } from "mongoose";
 
 export { Workspace } from "./models/workspace";
 

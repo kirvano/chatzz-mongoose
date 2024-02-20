@@ -23,7 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
-export * as mongoose from "mongoose";
+export { default as mongoose } from "mongoose";
 export { Workspace } from "./models/workspace";
 export { User } from "./models/user";
 export { TransmissionControl, TransmissionControlSchema, } from "./models/transmissionControl";
