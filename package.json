@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json && npm run fixup",
-    "fixup": "cp ./package.cjs.json ./lib/cjs/package.json && cp ./package.esm.json ./lib/esm/package.json"
+    "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json"
   },
   "author": "",
   "license": "ISC",
