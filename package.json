@@ -15,11 +15,22 @@
     "mongoose": "^6.8.4"
   },
   "exports": {
-    ".": {
-      "types": "./lib/types/index.d.ts",
+    "types": "./lib/types/index.d.ts",
+    "browser": {
       "require": "./lib/cjs/index.js",
-      "import": "./lib/esm/index.js",
-      "default": "./lib/esm/index.js"
+      "import": "./lib/esm/index.js"
+    },
+    "deno": {
+      "require": "./lib/cjs/index.js",
+      "import": "./lib/esm/index.js"
+    },
+    "worker": {
+      "require": "./lib/cjs/index.js",
+      "import": "./lib/esm/index.js"
+    },
+    "default": {
+      "require": "./lib/cjs/index.js",
+      "import": "./lib/esm/index.js"
     }
   }
 }
