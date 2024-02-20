@@ -21,7 +21,7 @@ const IntegrationLogsSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const IntegrationLogs = new mongoose.model(
+const IntegrationLogs = mongoose.model(
   "IntegrationLogs",
   IntegrationLogsSchema
 );

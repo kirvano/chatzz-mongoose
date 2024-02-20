@@ -42,5 +42,89 @@ export const IntegrationLogsSchema: mongoose.Schema<any, mongoose.Model<any, any
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
-export const IntegrationLogs: any;
+export const IntegrationLogs: mongoose.Model<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+}, {}, {}, {}, mongoose.Document<unknown, {}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+}> & {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+} & {
+    _id: mongoose.Types.ObjectId;
+}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, {
+    timestamps: true;
+}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+}>> & mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    events: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        type: "error" | "info" | "warning";
+        message: string;
+    }>;
+    integrationId: Buffer;
+    payloads: Buffer[];
+}> & {
+    _id: mongoose.Types.ObjectId;
+}>>;
 import { default as mongoose } from "mongoose";

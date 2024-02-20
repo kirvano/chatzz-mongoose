@@ -23,7 +23,7 @@ const GroupSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Group = new mongoose.model("Group", GroupSchema);
+const Group = mongoose.model("Group", GroupSchema);
 
 module.exports = {
   GroupSchema,

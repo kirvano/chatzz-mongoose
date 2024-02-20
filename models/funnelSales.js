@@ -18,7 +18,7 @@ const FunnelSalesSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const FunnelSales = new mongoose.model("FunnelSales", FunnelSalesSchema);
+const FunnelSales = mongoose.model("FunnelSales", FunnelSalesSchema);
 
 module.exports = {
   FunnelSalesSchema,

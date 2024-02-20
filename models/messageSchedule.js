@@ -14,7 +14,7 @@ const MessageScheduleSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const MessageSchedule = new mongoose.model(
+const MessageSchedule = mongoose.model(
   "MessageSchedule",
   MessageScheduleSchema
 );

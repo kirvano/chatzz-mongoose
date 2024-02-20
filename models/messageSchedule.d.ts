@@ -63,5 +63,83 @@ export const MessageScheduleSchema: mongoose.Schema<any, mongoose.Model<any, any
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
-export const MessageSchedule: any;
+export const MessageSchedule: mongoose.Model<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+}, {}, {}, {}, mongoose.Document<unknown, {}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+}> & {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+} & {
+    _id: mongoose.Types.ObjectId;
+}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, {
+    timestamps: true;
+}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+}>> & mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    type: "text" | "macro";
+    data: Buffer;
+    userId: Buffer;
+    jobId: string;
+    scheduledAt: Date;
+    contactId?: any;
+    groupId?: any;
+}> & {
+    _id: mongoose.Types.ObjectId;
+}>>;
 import mongoose = require("mongoose");

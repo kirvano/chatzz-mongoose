@@ -22,7 +22,7 @@ const CouponSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Coupon = new mongoose.model("Coupon", CouponSchema);
+const Coupon = mongoose.model("Coupon", CouponSchema);
 
 module.exports = {
   CouponSchema,

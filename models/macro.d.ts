@@ -57,5 +57,71 @@ export const MacroSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
-export const Macro: any;
+export const Macro: mongoose.Model<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+}, {}, {}, {}, mongoose.Document<unknown, {}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+}> & {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+} & {
+    _id: mongoose.Types.ObjectId;
+}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, {
+    timestamps: true;
+}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+}>> & mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    workspaceId: Buffer;
+    name: string;
+    author: Buffer;
+    category: "text" | "document" | "image" | "video" | "audio" | "script";
+    content: Buffer;
+    availability?: any;
+}> & {
+    _id: mongoose.Types.ObjectId;
+}>>;
 import mongoose = require("mongoose");

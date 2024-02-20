@@ -23,7 +23,7 @@ const MacroSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Macro = new mongoose.model("Macro", MacroSchema);
+const Macro = mongoose.model("Macro", MacroSchema);
 
 module.exports = {
   MacroSchema,

@@ -72,7 +72,7 @@ const ContactSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Contact = new mongoose.model("Contact", ContactSchema);
+const Contact = mongoose.model("Contact", ContactSchema);
 
 module.exports = {
   ContactSchema,
