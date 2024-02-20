@@ -2,7 +2,6 @@
   "name": "mongoose-models",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/cjs/index.js",
   "scripts": {
     "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json"
   },
