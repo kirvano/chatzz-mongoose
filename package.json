@@ -1,18 +1,25 @@
 {
-  "name": "mongoose",
+  "name": "mongoose-models",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:types": "rm -f models/*.d.ts && tsc --declaration --allowJs --emitDeclarationOnly --outDir models"
+    "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/mongoose": "^5.11.97",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "mongoose": "^6.8.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/lib.d.ts",
+      "require": "./lib/cjs/lib.js",
+      "import": "./lib/esm/lib.js",
+      "default": "./lib/esm/lib.js"
+    }
   }
 }
