@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json"
+    "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json && npm run fixup",
+    "fixup": "cp ./package.cjs.json ./lib/cjs/package.json && cp ./package.esm.json ./lib/esm/package.json"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +15,7 @@
     "mongoose": "^6.8.4"
   },
   "exports": {
-    "default": {
+    ".": {
       "types": "./lib/types/index.d.ts",
       "require": "./lib/cjs/index.js",
       "import": "./lib/esm/index.js",
