@@ -5,7 +5,7 @@ const FieldMapper = {
   name: { type: String, required: true },
   value: { type: String, required: true },
   prefix: { type: String },
-  customField: { type: mongoose.Types.ObjectId },
+  customField: { type: mongoose.Schema.Types.ObjectId },
 };
 
 const EventAction = new mongoose.Schema({

@@ -35,14 +35,7 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         key: string;
         value: string;
         prefix?: string | undefined;
-        customField?: {
-            prototype?: mongoose.Types.ObjectId | undefined;
-            cacheHexString?: unknown;
-            generate?: {} | undefined;
-            createFromTime?: {} | undefined;
-            createFromHexString?: {} | undefined;
-            isValid?: {} | undefined;
-        } | undefined;
+        customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
     active: boolean;
@@ -73,14 +66,7 @@ declare const Integration: mongoose.Model<{
         key: string;
         value: string;
         prefix?: string | undefined;
-        customField?: {
-            prototype?: mongoose.Types.ObjectId | undefined;
-            cacheHexString?: unknown;
-            generate?: {} | undefined;
-            createFromTime?: {} | undefined;
-            createFromHexString?: {} | undefined;
-            isValid?: {} | undefined;
-        } | undefined;
+        customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
     active: boolean;
@@ -111,14 +97,7 @@ declare const Integration: mongoose.Model<{
         key: string;
         value: string;
         prefix?: string | undefined;
-        customField?: {
-            prototype?: mongoose.Types.ObjectId | undefined;
-            cacheHexString?: unknown;
-            generate?: {} | undefined;
-            createFromTime?: {} | undefined;
-            createFromHexString?: {} | undefined;
-            isValid?: {} | undefined;
-        } | undefined;
+        customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
     active: boolean;
