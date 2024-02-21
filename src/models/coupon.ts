@@ -22,6 +22,8 @@ const CouponSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type CouponSchemaType = mongoose.InferSchemaType<typeof CouponSchema>;
+
 const Coupon = mongoose.model("Coupon", CouponSchema);
 
-export { CouponSchema, Coupon };
+export { CouponSchema, Coupon, CouponSchemaType };

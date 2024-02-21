@@ -302,4 +302,8 @@ const WorkspaceSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type WorkspaceSchemaType = mongoose.InferSchemaType<
+  typeof WorkspaceSchema
+>;
+
 export const Workspace = mongoose.model("Workspace", WorkspaceSchema);

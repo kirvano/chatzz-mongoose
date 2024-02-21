@@ -23,6 +23,27 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const MessageSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    date: Date;
+    transmissionId: string;
+    type?: string | undefined;
+    text?: string | undefined;
+    from?: string | undefined;
+    read?: boolean | undefined;
+    to?: string | undefined;
+    caption?: string | undefined;
+    chatId?: string | undefined;
+    msgId?: string | undefined;
+    url?: string | undefined;
+    quotedMessage?: string | undefined;
+    repliedMsgId?: string | undefined;
+}>;
+export type MessageSchemaType = mongoose.InferSchemaType<typeof MessageSchema>;
 export declare const ChatMessage: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -60,3 +81,4 @@ export declare const ChatMessage: mongoose.Model<{
     quotedMessage?: string | undefined;
     repliedMsgId?: string | undefined;
 }>>;
+export {};

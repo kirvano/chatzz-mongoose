@@ -39,6 +39,7 @@ declare const IntegrationLogsSchema: mongoose.Schema<any, mongoose.Model<any, an
     }>;
     payloads: any[];
 }>;
+type IntegrationLogsSchemaType = mongoose.InferSchemaType<typeof IntegrationLogsSchema>;
 declare const IntegrationLogs: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -68,4 +69,4 @@ declare const IntegrationLogs: mongoose.Model<{
     }>;
     payloads: any[];
 }>>;
-export { IntegrationLogsSchema, IntegrationLogs };
+export { IntegrationLogsSchema, IntegrationLogs, IntegrationLogsSchemaType };

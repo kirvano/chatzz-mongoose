@@ -73,4 +73,6 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type UserSchemaType = mongoose.InferSchemaType<typeof UserSchema>;
+
 export const User = mongoose.model("User", UserSchema);

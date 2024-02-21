@@ -1,12 +1,13 @@
 export { default as mongoose } from "mongoose";
 
-export { Workspace } from "./models/workspace";
+export { Workspace, WorkspaceSchemaType } from "./models/workspace";
 
-export { User } from "./models/user";
+export { User, UserSchemaType } from "./models/user";
 
 export {
   TransmissionControl,
   TransmissionControlSchema,
+  TransmissionControlSchemaType,
 } from "./models/transmissionControl";
 
 export { Transmission } from "./models/transmission";
@@ -16,42 +17,60 @@ export {
   QuestionSchema,
   Questionnaire,
   QuestionnaireSchema,
+  QuestionnaireSchemaType,
 } from "./models/questionnaire";
 
-export { Plan } from "./models/plan";
+export { Plan, PlanSchemaType } from "./models/plan";
 
-export { Notification } from "./models/notification";
+export { Notification, NotificationSchemaType } from "./models/notification";
 
 export {
   MessageSchedule,
   MessageScheduleSchema,
+  MessageScheduleSchemaType,
 } from "./models/messageSchedule";
 
-export { Macro, MacroSchema } from "./models/macro";
+export { Macro, MacroSchema, MacroSchemaType } from "./models/macro";
 
-export { Logs } from "./models/logs";
+export { Logs, LogsSchemaType } from "./models/logs";
 
-export { LiveChat } from "./models/livechat";
+export { LiveChat, ChatSchemaType } from "./models/livechat";
 
 export {
   IntegrationLogs,
   IntegrationLogsSchema,
+  IntegrationLogsSchemaType,
 } from "./models/integrationLogs";
 
-export { Integration, IntegrationSchema } from "./models/integration";
+export {
+  Integration,
+  IntegrationSchema,
+  IntegrationSchemaType,
+} from "./models/integration";
 
-export { Group, GroupSchema } from "./models/group";
+export { Group, GroupSchema, GroupSchemaType } from "./models/group";
 
-export { FunnelSales, FunnelSalesSchema } from "./models/funnelSales";
+export {
+  FunnelSales,
+  FunnelSalesSchema,
+  FunnelSalesSchemaType,
+} from "./models/funnelSales";
 
-export { FlowEvent } from "./models/FlowEvent";
+export { FlowEvent, FlowEventsSchemaType } from "./models/FlowEvent";
 
-export { Coupon, CouponSchema } from "./models/coupon";
+export { Coupon, CouponSchema, CouponSchemaType } from "./models/coupon";
 
-export { Contact, ContactSchema } from "./models/contact";
+export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
 
-export { ChatMessage } from "./models/chatmessage";
+export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 
-export { BusinessGroup, BusinessGroupSchema } from "./models/businessGroup";
+export {
+  BusinessGroup,
+  BusinessGroupSchema,
+  BusinessGroupSchemaType,
+} from "./models/businessGroup";
 
-export { AwaitingResponse } from "./models/AwaitingResponse";
+export {
+  AwaitingResponse,
+  AwaitingResponseSchemaType,
+} from "./models/AwaitingResponse";

@@ -44,6 +44,7 @@ declare const CouponSchema: mongoose.Schema<any, mongoose.Model<any, any, any, a
     }>;
     expiration?: Date | undefined;
 }>;
+type CouponSchemaType = mongoose.InferSchemaType<typeof CouponSchema>;
 declare const Coupon: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -83,4 +84,4 @@ declare const Coupon: mongoose.Model<{
     }>;
     expiration?: Date | undefined;
 }>>;
-export { CouponSchema, Coupon };
+export { CouponSchema, Coupon, CouponSchemaType };

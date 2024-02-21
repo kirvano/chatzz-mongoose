@@ -23,6 +23,32 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const PlanSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    active: boolean;
+    visibility: "visible" | "only_checkout";
+    chargeFrequency: number;
+    freeDays: number;
+    support: boolean;
+    accountManager: boolean;
+    onboarding: boolean;
+    integration: boolean;
+    chatbotAccess: boolean;
+    campaignAccess: boolean;
+    transmissionAccess: boolean;
+    webhooksAccess: boolean;
+    funnelSalesAccess: boolean;
+    name?: string | undefined;
+    description?: string | undefined;
+    price?: number | undefined;
+    attendants?: number | undefined;
+    massShooting?: number | undefined;
+}>;
+export type PlanSchemaType = mongoose.InferSchemaType<typeof PlanSchema>;
 export declare const Plan: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -70,3 +96,4 @@ export declare const Plan: mongoose.Model<{
     attendants?: number | undefined;
     massShooting?: number | undefined;
 }>>;
+export {};

@@ -23,6 +23,18 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const NotificationSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    type: "workspace_invite";
+    userId: mongoose.Types.ObjectId;
+    read: boolean;
+    data?: any;
+}>;
+export type NotificationSchemaType = mongoose.InferSchemaType<typeof NotificationSchema>;
 export declare const Notification: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -42,3 +54,4 @@ export declare const Notification: mongoose.Model<{
     read: boolean;
     data?: any;
 }>>;
+export {};

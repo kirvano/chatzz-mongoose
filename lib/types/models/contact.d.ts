@@ -54,6 +54,7 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
 }>;
+type ContactSchemaType = mongoose.InferSchemaType<typeof ContactSchema>;
 declare const Contact: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -113,4 +114,4 @@ declare const Contact: mongoose.Model<{
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
 }>>;
-export { ContactSchema, Contact };
+export { ContactSchema, Contact, ContactSchemaType };

@@ -14,9 +14,13 @@ const MessageScheduleSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type MessageScheduleSchemaType = mongoose.InferSchemaType<
+  typeof MessageScheduleSchema
+>;
+
 const MessageSchedule = mongoose.model(
   "MessageSchedule",
   MessageScheduleSchema
 );
 
-export { MessageScheduleSchema, MessageSchedule };
+export { MessageScheduleSchema, MessageSchedule, MessageScheduleSchemaType };

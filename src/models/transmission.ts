@@ -19,4 +19,8 @@ const TransmissionSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type TransmissionSchemaType = mongoose.InferSchemaType<
+  typeof TransmissionSchema
+>;
+
 export const Transmission = mongoose.model("Transmission", TransmissionSchema);

@@ -68,6 +68,7 @@ declare const QuestionnaireSchema: mongoose.Schema<any, mongoose.Model<any, any,
     name?: string | undefined;
     description?: string | undefined;
 }>;
+type QuestionnaireSchemaType = mongoose.InferSchemaType<typeof QuestionnaireSchema>;
 declare const Questionnaire: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -129,4 +130,4 @@ declare const Questionnaire: mongoose.Model<{
     name?: string | undefined;
     description?: string | undefined;
 }>>;
-export { AnswerSchema, QuestionSchema, QuestionnaireSchema, Questionnaire };
+export { AnswerSchema, QuestionSchema, QuestionnaireSchema, Questionnaire, QuestionnaireSchemaType, };

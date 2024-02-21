@@ -23,6 +23,18 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const TransmissionSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    createdAt: Date;
+    phoneNumbers: any[];
+    userId?: string | undefined;
+    name?: string | undefined;
+}>;
+export type TransmissionSchemaType = mongoose.InferSchemaType<typeof TransmissionSchema>;
 export declare const Transmission: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -42,3 +54,4 @@ export declare const Transmission: mongoose.Model<{
     userId?: string | undefined;
     name?: string | undefined;
 }>>;
+export {};

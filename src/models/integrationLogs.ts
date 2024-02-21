@@ -21,9 +21,13 @@ const IntegrationLogsSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type IntegrationLogsSchemaType = mongoose.InferSchemaType<
+  typeof IntegrationLogsSchema
+>;
+
 const IntegrationLogs = mongoose.model(
   "IntegrationLogs",
   IntegrationLogsSchema
 );
 
-export { IntegrationLogsSchema, IntegrationLogs };
+export { IntegrationLogsSchema, IntegrationLogs, IntegrationLogsSchemaType };

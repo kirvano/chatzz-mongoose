@@ -47,6 +47,10 @@ const AwaitingResponseSchema = new mongoose.Schema(
   }
 );
 
+export type AwaitingResponseSchemaType = mongoose.InferSchemaType<
+  typeof AwaitingResponseSchema
+>;
+
 export const AwaitingResponse = mongoose.model(
   "AwaitingResponse",
   AwaitingResponseSchema

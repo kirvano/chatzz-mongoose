@@ -62,4 +62,6 @@ const PlanSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type PlanSchemaType = mongoose.InferSchemaType<typeof PlanSchema>;
+
 export const Plan = mongoose.model("Plan", PlanSchema);

@@ -62,6 +62,7 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     executions: number;
     direction: "input" | "output";
 }>;
+type IntegrationSchemaType = mongoose.InferSchemaType<typeof IntegrationSchema>;
 declare const Integration: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -137,4 +138,4 @@ declare const Integration: mongoose.Model<{
     executions: number;
     direction: "input" | "output";
 }>>;
-export { IntegrationSchema, Integration };
+export { IntegrationSchema, Integration, IntegrationSchemaType };

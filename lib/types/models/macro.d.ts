@@ -39,6 +39,7 @@ declare const MacroSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
         users: mongoose.Types.ObjectId[];
     } | undefined;
 }>;
+type MacroSchemaType = mongoose.InferSchemaType<typeof MacroSchema>;
 declare const Macro: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -68,4 +69,4 @@ declare const Macro: mongoose.Model<{
         users: mongoose.Types.ObjectId[];
     } | undefined;
 }>>;
-export { MacroSchema, Macro };
+export { MacroSchema, Macro, MacroSchemaType };

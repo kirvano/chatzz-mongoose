@@ -56,6 +56,10 @@ const BusinessGroupSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type BusinessGroupSchemaType = mongoose.InferSchemaType<
+  typeof BusinessGroupSchema
+>;
+
 const BusinessGroup = mongoose.model("BusinessGroup", BusinessGroupSchema);
 
-export { BusinessGroupSchema, BusinessGroup };
+export { BusinessGroupSchema, BusinessGroup, BusinessGroupSchemaType };

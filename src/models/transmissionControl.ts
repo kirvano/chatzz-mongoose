@@ -26,9 +26,17 @@ const TransmissionControlSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type TransmissionControlSchemaType = mongoose.InferSchemaType<
+  typeof TransmissionControlSchema
+>;
+
 const TransmissionControl = mongoose.model(
   "TransmissionControl",
   TransmissionControlSchema
 );
 
-export { TransmissionControlSchema, TransmissionControl };
+export {
+  TransmissionControlSchema,
+  TransmissionControl,
+  TransmissionControlSchemaType,
+};

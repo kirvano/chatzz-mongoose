@@ -23,6 +23,26 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const AwaitingResponseSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    waitUntil: Date;
+    value: any;
+    variable: string;
+    options: any[];
+    flowId?: string | undefined;
+    jid?: string | undefined;
+    workspaceId?: string | undefined;
+    nextStep?: any;
+    step?: any;
+    attempted?: number | undefined;
+    idTimesUpJobDispatch?: string | undefined;
+    shouldIgnoreResponse?: boolean | undefined;
+}>;
+export type AwaitingResponseSchemaType = mongoose.InferSchemaType<typeof AwaitingResponseSchema>;
 export declare const AwaitingResponse: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -58,3 +78,4 @@ export declare const AwaitingResponse: mongoose.Model<{
     idTimesUpJobDispatch?: string | undefined;
     shouldIgnoreResponse?: boolean | undefined;
 }>>;
+export {};

@@ -43,4 +43,8 @@ const FlowEventsSchema = new mongoose.Schema(
   }
 );
 
+export type FlowEventsSchemaType = mongoose.InferSchemaType<
+  typeof FlowEventsSchema
+>;
+
 export const FlowEvent = mongoose.model("FlowEvent", FlowEventsSchema);

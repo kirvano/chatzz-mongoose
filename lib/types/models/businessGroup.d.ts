@@ -44,6 +44,7 @@ declare const BusinessGroupSchema: mongoose.Schema<any, mongoose.Model<any, any,
         state?: string | undefined;
     } | undefined;
 }>;
+type BusinessGroupSchemaType = mongoose.InferSchemaType<typeof BusinessGroupSchema>;
 declare const BusinessGroup: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -83,4 +84,4 @@ declare const BusinessGroup: mongoose.Model<{
         state?: string | undefined;
     } | undefined;
 }>>;
-export { BusinessGroupSchema, BusinessGroup };
+export { BusinessGroupSchema, BusinessGroup, BusinessGroupSchemaType };

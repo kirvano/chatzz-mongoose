@@ -72,6 +72,8 @@ const ContactSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type ContactSchemaType = mongoose.InferSchemaType<typeof ContactSchema>;
+
 const Contact = mongoose.model("Contact", ContactSchema);
 
-export { ContactSchema, Contact };
+export { ContactSchema, Contact, ContactSchemaType };

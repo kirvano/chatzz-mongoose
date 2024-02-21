@@ -23,6 +23,33 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    createdAt: Date;
+    members: any[];
+    attendantUserId: mongoose.Types.ObjectId;
+    assignmentHistory: mongoose.Types.DocumentArray<{
+        attendantUserId: mongoose.Types.ObjectId;
+        action?: string | undefined;
+    }>;
+    contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
+    status?: {
+        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
+        origin: "user" | "bot";
+        updatedBy?: {
+            userId: string;
+            updatedAt: Date;
+        } | undefined;
+    } | undefined;
+    message?: string | undefined;
+    jid?: string | undefined;
+    workspaceId?: mongoose.Types.ObjectId | undefined;
+}>;
+export type ChatSchemaType = mongoose.InferSchemaType<typeof ChatSchema>;
 export declare const LiveChat: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -72,3 +99,4 @@ export declare const LiveChat: mongoose.Model<{
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
 }>>;
+export {};

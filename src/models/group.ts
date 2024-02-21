@@ -23,6 +23,8 @@ const GroupSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type GroupSchemaType = mongoose.InferSchemaType<typeof GroupSchema>;
+
 const Group = mongoose.model("Group", GroupSchema);
 
-export { GroupSchema, Group };
+export { GroupSchema, Group, GroupSchemaType };

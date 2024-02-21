@@ -37,6 +37,8 @@ const IntegrationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type IntegrationSchemaType = mongoose.InferSchemaType<typeof IntegrationSchema>;
+
 const Integration = mongoose.model("Integration", IntegrationSchema);
 
-export { IntegrationSchema, Integration };
+export { IntegrationSchema, Integration, IntegrationSchemaType };

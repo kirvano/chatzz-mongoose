@@ -21,4 +21,6 @@ const LogsSchema = new mongoose.Schema({
   },
 });
 
+export type LogsSchemaType = mongoose.InferSchemaType<typeof LogsSchema>;
+
 export const Logs = mongoose.model("Logs", LogsSchema);

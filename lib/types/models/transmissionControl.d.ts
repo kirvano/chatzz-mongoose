@@ -35,6 +35,7 @@ declare const TransmissionControlSchema: mongoose.Schema<any, mongoose.Model<any
     trasmissionId: string;
     to: string;
 }>;
+type TransmissionControlSchemaType = mongoose.InferSchemaType<typeof TransmissionControlSchema>;
 declare const TransmissionControl: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -56,4 +57,4 @@ declare const TransmissionControl: mongoose.Model<{
     trasmissionId: string;
     to: string;
 }>>;
-export { TransmissionControlSchema, TransmissionControl };
+export { TransmissionControlSchema, TransmissionControl, TransmissionControlSchemaType, };

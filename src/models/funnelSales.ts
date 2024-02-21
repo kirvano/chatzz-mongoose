@@ -18,6 +18,8 @@ const FunnelSalesSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type FunnelSalesSchemaType = mongoose.InferSchemaType<typeof FunnelSalesSchema>;
+
 const FunnelSales = mongoose.model("FunnelSales", FunnelSalesSchema);
 
-export { FunnelSalesSchema, FunnelSales };
+export { FunnelSalesSchema, FunnelSales, FunnelSalesSchemaType };

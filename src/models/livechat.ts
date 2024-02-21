@@ -71,4 +71,6 @@ const ChatSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type ChatSchemaType = mongoose.InferSchemaType<typeof ChatSchema>;
+
 export const LiveChat = mongoose.model("LiveChat", ChatSchema);

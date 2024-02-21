@@ -38,6 +38,7 @@ declare const MessageScheduleSchema: mongoose.Schema<any, mongoose.Model<any, an
     contactId?: mongoose.Types.ObjectId | undefined;
     groupId?: mongoose.Types.ObjectId | undefined;
 }>;
+type MessageScheduleSchemaType = mongoose.InferSchemaType<typeof MessageScheduleSchema>;
 declare const MessageSchedule: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -65,4 +66,4 @@ declare const MessageSchedule: mongoose.Model<{
     contactId?: mongoose.Types.ObjectId | undefined;
     groupId?: mongoose.Types.ObjectId | undefined;
 }>>;
-export { MessageScheduleSchema, MessageSchedule };
+export { MessageScheduleSchema, MessageSchedule, MessageScheduleSchemaType };

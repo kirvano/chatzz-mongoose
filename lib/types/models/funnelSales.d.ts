@@ -40,6 +40,7 @@ declare const FunnelSalesSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         name: string;
     }>;
 }>;
+type FunnelSalesSchemaType = mongoose.InferSchemaType<typeof FunnelSalesSchema>;
 declare const FunnelSales: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -71,4 +72,4 @@ declare const FunnelSales: mongoose.Model<{
         name: string;
     }>;
 }>>;
-export { FunnelSalesSchema, FunnelSales };
+export { FunnelSalesSchema, FunnelSales, FunnelSalesSchemaType };

@@ -45,6 +45,7 @@ declare const GroupSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     description?: string | undefined;
     ownerJid?: string | undefined;
 }>;
+type GroupSchemaType = mongoose.InferSchemaType<typeof GroupSchema>;
 declare const Group: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -86,4 +87,4 @@ declare const Group: mongoose.Model<{
     description?: string | undefined;
     ownerJid?: string | undefined;
 }>>;
-export { GroupSchema, Group };
+export { GroupSchema, Group, GroupSchemaType };

@@ -10,4 +10,8 @@ const NotificationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+export type NotificationSchemaType = mongoose.InferSchemaType<
+  typeof NotificationSchema
+>;
+
 export const Notification = mongoose.model("Notification", NotificationSchema);

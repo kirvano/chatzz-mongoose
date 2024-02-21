@@ -23,6 +23,48 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    role: "user" | "superadmin";
+    phoneNumber: string;
+    active: boolean;
+    blocked: boolean;
+    wallet: {
+        paymentMethod: string;
+        isDefault: boolean;
+        paymentName: string;
+        paymentDocument: string;
+    }[];
+    profilePicture: string;
+    logLoginList: {
+        status: string;
+        createdAt: Date;
+    }[];
+    passwordSetted: boolean;
+    userId?: string | undefined;
+    stripeCustomerId?: string | undefined;
+    document?: string | undefined;
+    email?: string | undefined;
+    username?: string | undefined;
+    password?: string | undefined;
+    userAddress?: {
+        cep?: string | undefined;
+        city?: string | undefined;
+        streetAddress?: string | undefined;
+        neighborhood?: string | undefined;
+        houseNumber?: string | undefined;
+        complement?: string | undefined;
+        country?: string | undefined;
+        state?: string | undefined;
+    } | undefined;
+    businessGroupId?: string | undefined;
+    isLegalEntity?: boolean | undefined;
+}>;
+export type UserSchemaType = mongoose.InferSchemaType<typeof UserSchema>;
 export declare const User: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -102,3 +144,4 @@ export declare const User: mongoose.Model<{
     businessGroupId?: string | undefined;
     isLegalEntity?: boolean | undefined;
 }>>;
+export {};

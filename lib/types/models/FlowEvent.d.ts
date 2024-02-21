@@ -23,6 +23,24 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const FlowEventsSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+    timestamps: true;
+}>, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    waitUntil: Date;
+    value: any;
+    isAwaitingResponse: boolean;
+    variable: string;
+    attempts: number;
+    flowId?: string | undefined;
+    sent?: any;
+    jid?: string | undefined;
+    stepId?: string | undefined;
+    baileysResponse?: any;
+}>;
+export type FlowEventsSchemaType = mongoose.InferSchemaType<typeof FlowEventsSchema>;
 export declare const FlowEvent: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -54,3 +72,4 @@ export declare const FlowEvent: mongoose.Model<{
     stepId?: string | undefined;
     baileysResponse?: any;
 }>>;
+export {};

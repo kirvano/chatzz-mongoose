@@ -75,6 +75,16 @@ const QuestionnaireSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type QuestionnaireSchemaType = mongoose.InferSchemaType<
+  typeof QuestionnaireSchema
+>;
+
 const Questionnaire = mongoose.model("Questionnaire", QuestionnaireSchema);
 
-export { AnswerSchema, QuestionSchema, QuestionnaireSchema, Questionnaire };
+export {
+  AnswerSchema,
+  QuestionSchema,
+  QuestionnaireSchema,
+  Questionnaire,
+  QuestionnaireSchemaType,
+};

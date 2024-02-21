@@ -23,6 +23,16 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
+declare const LogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    timestamp: Date;
+    message?: string | undefined;
+    level?: string | undefined;
+    meta?: {
+        user?: string | undefined;
+        err?: string | undefined;
+    } | undefined;
+}>;
+export type LogsSchemaType = mongoose.InferSchemaType<typeof LogsSchema>;
 export declare const Logs: mongoose.Model<{
     timestamp: Date;
     message?: string | undefined;
@@ -40,3 +50,4 @@ export declare const Logs: mongoose.Model<{
         err?: string | undefined;
     } | undefined;
 }>>;
+export {};

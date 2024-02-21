@@ -23,6 +23,8 @@ const MacroSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+type MacroSchemaType = mongoose.InferSchemaType<typeof MacroSchema>;
+
 const Macro = mongoose.model("Macro", MacroSchema);
 
-export { MacroSchema, Macro };
+export { MacroSchema, Macro, MacroSchemaType };

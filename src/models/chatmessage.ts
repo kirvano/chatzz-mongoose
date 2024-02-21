@@ -44,4 +44,6 @@ const MessageSchema = new mongoose.Schema(
   }
 );
 
+export type MessageSchemaType = mongoose.InferSchemaType<typeof MessageSchema>;
+
 export const ChatMessage = mongoose.model("ChatMessage", MessageSchema);
