@@ -29,10 +29,18 @@ const WorkspaceInputFlowSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+const WorkspaceMemberPrivacySchema = new mongoose.Schema(
+  {
+    allMessages: { type: Boolean, default: false },
+  },
+  { timestamps: true }
+);
+
 const WorkspaceMemberSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     allowedPaths: [String],
+    privacy: WorkspaceMemberPrivacySchema,
     role: {
       type: String,
       enum: ["admin", "user"],

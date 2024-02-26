@@ -5,9 +5,15 @@
   "scripts": {
     "build": "rm -rf ./lib && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json"
   },
-  "author": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add lib"
+    }
+  },
+  "author": "N Soluções",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^9.0.11",
     "typescript": "^5.3.3"
   },
   "dependencies": {
