@@ -41,8 +41,8 @@ declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     }[];
     profilePicture: string;
     logLoginList: {
-        status: string;
         createdAt: Date;
+        status: string;
     }[];
     passwordSetted: boolean;
     userId?: string | undefined;
@@ -81,8 +81,8 @@ export declare const User: mongoose.Model<{
     }[];
     profilePicture: string;
     logLoginList: {
-        status: string;
         createdAt: Date;
+        status: string;
     }[];
     passwordSetted: boolean;
     userId?: string | undefined;
@@ -121,8 +121,8 @@ export declare const User: mongoose.Model<{
     }[];
     profilePicture: string;
     logLoginList: {
-        status: string;
         createdAt: Date;
+        status: string;
     }[];
     passwordSetted: boolean;
     userId?: string | undefined;

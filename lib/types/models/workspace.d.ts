@@ -37,6 +37,12 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     } & {
         allowedPaths: string[];
         role: "admin" | "user";
+        privacy?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            allMessages: boolean;
+        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{
@@ -217,6 +223,12 @@ export declare const Workspace: mongoose.Model<{
     } & {
         allowedPaths: string[];
         role: "admin" | "user";
+        privacy?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            allMessages: boolean;
+        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{
@@ -397,6 +409,12 @@ export declare const Workspace: mongoose.Model<{
     } & {
         allowedPaths: string[];
         role: "admin" | "user";
+        privacy?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            allMessages: boolean;
+        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{

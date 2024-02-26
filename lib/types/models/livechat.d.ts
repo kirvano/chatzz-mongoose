@@ -37,6 +37,7 @@ declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
         action?: string | undefined;
     }>;
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
+    message?: string | undefined;
     status?: {
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
         origin: "user" | "bot";
@@ -45,7 +46,6 @@ declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
             updatedAt: Date;
         } | undefined;
     } | undefined;
-    message?: string | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
 }>;
@@ -62,6 +62,7 @@ export declare const LiveChat: mongoose.Model<{
         action?: string | undefined;
     }>;
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
+    message?: string | undefined;
     status?: {
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
         origin: "user" | "bot";
@@ -70,7 +71,6 @@ export declare const LiveChat: mongoose.Model<{
             updatedAt: Date;
         } | undefined;
     } | undefined;
-    message?: string | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
@@ -87,6 +87,7 @@ export declare const LiveChat: mongoose.Model<{
         action?: string | undefined;
     }>;
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
+    message?: string | undefined;
     status?: {
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
         origin: "user" | "bot";
@@ -95,7 +96,6 @@ export declare const LiveChat: mongoose.Model<{
             updatedAt: Date;
         } | undefined;
     } | undefined;
-    message?: string | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
 }>>;
