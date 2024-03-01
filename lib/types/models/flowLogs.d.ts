@@ -32,6 +32,7 @@ declare const FlowLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any,
     message: string;
     code?: string | undefined;
     flowId?: mongoose.Types.ObjectId | undefined;
+    jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
@@ -44,6 +45,7 @@ declare const FlowLogs: mongoose.Model<{
     message: string;
     code?: string | undefined;
     flowId?: mongoose.Types.ObjectId | undefined;
+    jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
@@ -56,6 +58,7 @@ declare const FlowLogs: mongoose.Model<{
     message: string;
     code?: string | undefined;
     flowId?: mongoose.Types.ObjectId | undefined;
+    jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
