@@ -45,3 +45,4 @@ export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
 export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 export { BusinessGroup, BusinessGroupSchema, BusinessGroupSchemaType, } from "./models/businessGroup";
 export { AwaitingResponse, AwaitingResponseSchemaType, } from "./models/AwaitingResponse";
+export { FlowLogs, FlowLogsSchema, FlowLogsSchemaType, } from "./models/flowLogs";

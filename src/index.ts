@@ -74,3 +74,9 @@ export {
   AwaitingResponse,
   AwaitingResponseSchemaType,
 } from "./models/AwaitingResponse";
+
+export {
+  FlowLogs,
+  FlowLogsSchema,
+  FlowLogsSchemaType,
+} from "./models/flowLogs";
