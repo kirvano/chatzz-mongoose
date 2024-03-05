@@ -9,6 +9,7 @@ const FlowLogsSchema = new mongoose.Schema(
     code: { type: String },
     message: { type: String, required: true },
     stack: { type: String },
+    payload: { type: String },
   },
   { timestamps: true }
 );

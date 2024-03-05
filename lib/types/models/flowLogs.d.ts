@@ -36,6 +36,7 @@ declare const FlowLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any,
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
+    payload?: string | undefined;
 }>;
 type FlowLogsSchemaType = mongoose.InferSchemaType<typeof FlowLogsSchema>;
 declare const FlowLogs: mongoose.Model<{
@@ -49,6 +50,7 @@ declare const FlowLogs: mongoose.Model<{
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
+    payload?: string | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -62,5 +64,6 @@ declare const FlowLogs: mongoose.Model<{
     workspaceId?: mongoose.Types.ObjectId | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
+    payload?: string | undefined;
 }>>;
 export { FlowLogsSchema, FlowLogs, FlowLogsSchemaType };
