@@ -126,6 +126,12 @@ const WorkspaceTransmissionSchema = new mongoose.Schema(
     },
     name: { type: String },
     delay: { type: String, default: "1" },
+    status: {
+      type: String,
+      enum: ["executing", "paused", "stopped"],
+      default: "stopped",
+    },
+    remainingPhoneList: { type: [String] },
     phoneList: [
       {
         phoneNumber: { type: String },
