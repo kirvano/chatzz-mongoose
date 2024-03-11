@@ -60,8 +60,10 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
@@ -246,8 +248,10 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
@@ -432,8 +436,10 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
