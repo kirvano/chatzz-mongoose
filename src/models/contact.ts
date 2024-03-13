@@ -60,7 +60,7 @@ const ContactSchema = new mongoose.Schema(
     ],
     fields: [
       {
-        _id: { type: String, unique: true },
+        _id: { type: String },
         value: {
           type: String,
           default: "",
