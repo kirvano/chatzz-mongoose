@@ -29,7 +29,7 @@ declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    role: "user" | "superadmin";
+    role: "admin" | "user" | "superadmin";
     phoneNumber: string;
     active: boolean;
     blocked: boolean;
@@ -45,6 +45,7 @@ declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
         status: string;
     }[];
     passwordSetted: boolean;
+    adminPermissions: string[];
     userId?: string | undefined;
     stripeCustomerId?: string | undefined;
     document?: string | undefined;
@@ -69,7 +70,7 @@ export declare const User: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    role: "user" | "superadmin";
+    role: "admin" | "user" | "superadmin";
     phoneNumber: string;
     active: boolean;
     blocked: boolean;
@@ -85,6 +86,7 @@ export declare const User: mongoose.Model<{
         status: string;
     }[];
     passwordSetted: boolean;
+    adminPermissions: string[];
     userId?: string | undefined;
     stripeCustomerId?: string | undefined;
     document?: string | undefined;
@@ -109,7 +111,7 @@ export declare const User: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    role: "user" | "superadmin";
+    role: "admin" | "user" | "superadmin";
     phoneNumber: string;
     active: boolean;
     blocked: boolean;
@@ -125,6 +127,7 @@ export declare const User: mongoose.Model<{
         status: string;
     }[];
     passwordSetted: boolean;
+    adminPermissions: string[];
     userId?: string | undefined;
     stripeCustomerId?: string | undefined;
     document?: string | undefined;

@@ -66,8 +66,12 @@ const UserSchema = new mongoose.Schema(
     passwordSetted: { type: Boolean, default: false },
     role: {
       type: String,
-      enum: ["superadmin", "user"],
+      enum: ["superadmin", "admin", "user"],
       default: "user",
+    },
+    adminPermissions: {
+      type: [String],
+      default: [],
     },
   },
   { timestamps: true }
