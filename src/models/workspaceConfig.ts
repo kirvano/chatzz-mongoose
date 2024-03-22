@@ -2,7 +2,11 @@ import mongoose from "mongoose";
 
 const WorkspaceConfigSchema = new mongoose.Schema(
   {
-    workspaceId: { type: mongoose.Schema.Types.ObjectId, required: true },
+    workspaceId: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      unique: true,
+    },
     apiUrl: { type: String, default: "" },
     secretApi: { type: String, default: "" },
   },
