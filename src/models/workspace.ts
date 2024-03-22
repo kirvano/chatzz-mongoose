@@ -139,6 +139,7 @@ const WorkspaceTransmissionSchema = new mongoose.Schema(
           type: Boolean,
           default: false,
         },
+        error: { type: String },
       },
     ],
     isScheduled: {

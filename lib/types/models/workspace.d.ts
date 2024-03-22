@@ -67,6 +67,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
+            error?: string | undefined;
         }[];
         isScheduled: boolean;
         daysOfWeek: string[];
@@ -255,6 +256,7 @@ export declare const Workspace: mongoose.Model<{
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
+            error?: string | undefined;
         }[];
         isScheduled: boolean;
         daysOfWeek: string[];
@@ -443,6 +445,7 @@ export declare const Workspace: mongoose.Model<{
         phoneList: {
             sent: boolean;
             phoneNumber?: string | undefined;
+            error?: string | undefined;
         }[];
         isScheduled: boolean;
         daysOfWeek: string[];
