@@ -25,6 +25,7 @@
 /// <reference types="mongoose/types/inferschematype" />
 export { default as mongoose } from "mongoose";
 export { Workspace, WorkspaceSchemaType } from "./models/workspace";
+export { WorkspaceConfig, WorkspaceConfigSchemaType, } from "./models/workspaceConfig";
 export { User, UserSchemaType } from "./models/user";
 export { TransmissionControl, TransmissionControlSchema, TransmissionControlSchemaType, } from "./models/transmissionControl";
 export { Transmission } from "./models/transmission";

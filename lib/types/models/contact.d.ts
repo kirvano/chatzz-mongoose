@@ -45,8 +45,8 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
-    profilePicture?: string | undefined;
     workspaceId?: string | undefined;
+    profilePicture?: string | undefined;
     automation?: {
         paused: boolean;
         pausedForMs: number;
@@ -75,8 +75,8 @@ declare const Contact: mongoose.Model<{
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
-    profilePicture?: string | undefined;
     workspaceId?: string | undefined;
+    profilePicture?: string | undefined;
     automation?: {
         paused: boolean;
         pausedForMs: number;
@@ -105,8 +105,8 @@ declare const Contact: mongoose.Model<{
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
-    profilePicture?: string | undefined;
     workspaceId?: string | undefined;
+    profilePicture?: string | undefined;
     automation?: {
         paused: boolean;
         pausedForMs: number;
