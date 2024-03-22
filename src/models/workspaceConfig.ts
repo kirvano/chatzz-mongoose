@@ -8,7 +8,7 @@ const WorkspaceConfigSchema = new mongoose.Schema(
       unique: true,
     },
     apiUrl: { type: String, default: "" },
-    secretApi: { type: String, default: "" },
+    apiSecret: { type: String, default: "" },
   },
   { timestamps: true }
 );

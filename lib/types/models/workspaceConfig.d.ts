@@ -31,7 +31,7 @@ declare const WorkspaceConfigSchema: mongoose.Schema<any, mongoose.Model<any, an
 } & {
     workspaceId: mongoose.Types.ObjectId;
     apiUrl: string;
-    secretApi: string;
+    apiSecret: string;
 }>;
 export type WorkspaceConfigSchemaType = mongoose.InferSchemaType<typeof WorkspaceConfigSchema>;
 export declare const WorkspaceConfig: mongoose.Model<{
@@ -40,7 +40,7 @@ export declare const WorkspaceConfig: mongoose.Model<{
 } & {
     workspaceId: mongoose.Types.ObjectId;
     apiUrl: string;
-    secretApi: string;
+    apiSecret: string;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -49,6 +49,6 @@ export declare const WorkspaceConfig: mongoose.Model<{
 } & {
     workspaceId: mongoose.Types.ObjectId;
     apiUrl: string;
-    secretApi: string;
+    apiSecret: string;
 }>>;
 export {};
