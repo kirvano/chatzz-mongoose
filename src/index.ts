@@ -85,3 +85,5 @@ export {
   FlowLogsSchema,
   FlowLogsSchemaType,
 } from "./models/flowLogs";
+
+export { LabelConfigs, LabelConfigsSchemaType } from "./models/labelConfigs";
