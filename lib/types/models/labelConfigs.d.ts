@@ -29,21 +29,23 @@ declare const LabelConfigsSchema: mongoose.Schema<any, mongoose.Model<any, any, 
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    name?: string | undefined;
-    description?: string | undefined;
+    name: string;
+    description: string;
+    fullLogo: string;
+    simplifiedLogo: string;
+    favicon: string;
+    loginBanner: string;
+    helpLink: string;
     email?: {
-        user?: string | undefined;
-        password?: string | undefined;
-        host?: string | undefined;
-        port?: string | undefined;
+        user: string;
+        password: string;
+        host: string;
+        port: string;
     } | undefined;
-    fullLogo?: string | undefined;
-    simplifiedLogo?: string | undefined;
-    favicon?: string | undefined;
-    loginBanner?: string | undefined;
-    helpLink?: string | undefined;
     domain?: {
-        host?: string | undefined;
+        host: string;
+        txtName: string;
+        txtValue: string;
     } | undefined;
 }>;
 export type LabelConfigsSchemaType = mongoose.InferSchemaType<typeof LabelConfigsSchema>;
@@ -51,21 +53,23 @@ export declare const LabelConfigs: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    name?: string | undefined;
-    description?: string | undefined;
+    name: string;
+    description: string;
+    fullLogo: string;
+    simplifiedLogo: string;
+    favicon: string;
+    loginBanner: string;
+    helpLink: string;
     email?: {
-        user?: string | undefined;
-        password?: string | undefined;
-        host?: string | undefined;
-        port?: string | undefined;
+        user: string;
+        password: string;
+        host: string;
+        port: string;
     } | undefined;
-    fullLogo?: string | undefined;
-    simplifiedLogo?: string | undefined;
-    favicon?: string | undefined;
-    loginBanner?: string | undefined;
-    helpLink?: string | undefined;
     domain?: {
-        host?: string | undefined;
+        host: string;
+        txtName: string;
+        txtValue: string;
     } | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
@@ -73,21 +77,23 @@ export declare const LabelConfigs: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    name?: string | undefined;
-    description?: string | undefined;
+    name: string;
+    description: string;
+    fullLogo: string;
+    simplifiedLogo: string;
+    favicon: string;
+    loginBanner: string;
+    helpLink: string;
     email?: {
-        user?: string | undefined;
-        password?: string | undefined;
-        host?: string | undefined;
-        port?: string | undefined;
+        user: string;
+        password: string;
+        host: string;
+        port: string;
     } | undefined;
-    fullLogo?: string | undefined;
-    simplifiedLogo?: string | undefined;
-    favicon?: string | undefined;
-    loginBanner?: string | undefined;
-    helpLink?: string | undefined;
     domain?: {
-        host?: string | undefined;
+        host: string;
+        txtName: string;
+        txtValue: string;
     } | undefined;
 }>>;
 export {};

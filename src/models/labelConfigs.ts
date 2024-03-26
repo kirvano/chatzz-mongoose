@@ -2,21 +2,23 @@ import mongoose from "mongoose";
 
 const LabelConfigsSchema = new mongoose.Schema(
   {
-    name: { type: String },
-    description: { type: String },
-    fullLogo: { type: String },
-    simplifiedLogo: { type: String },
-    favicon: { type: String },
-    loginBanner: { type: String },
-    helpLink: { type: String },
+    name: { type: String, default: "" },
+    description: { type: String, default: "" },
+    fullLogo: { type: String, default: "" },
+    simplifiedLogo: { type: String, default: "" },
+    favicon: { type: String, default: "" },
+    loginBanner: { type: String, default: "" },
+    helpLink: { type: String, default: "" },
     email: {
-      user: { type: String },
-      password: { type: String },
-      host: { type: String },
-      port: { type: String },
+      user: { type: String, default: "" },
+      password: { type: String, default: "" },
+      host: { type: String, default: "" },
+      port: { type: String, default: "" },
     },
     domain: {
-      host: { type: String },
+      host: { type: String, default: "" },
+      txtName: { type: String, default: "" },
+      txtValue: { type: String, default: "" },
     },
   },
   { timestamps: true }
