@@ -30,8 +30,8 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     updatedAt: NativeDate;
 } & {
     fields: {
+        _id: string;
         value: string;
-        _id?: string | undefined;
     }[];
     jid: string;
     tags: {
@@ -60,8 +60,8 @@ declare const Contact: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     fields: {
+        _id: string;
         value: string;
-        _id?: string | undefined;
     }[];
     jid: string;
     tags: {
@@ -90,8 +90,8 @@ declare const Contact: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     fields: {
+        _id: string;
         value: string;
-        _id?: string | undefined;
     }[];
     jid: string;
     tags: {
