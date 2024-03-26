@@ -43,6 +43,7 @@ declare const LabelConfigsSchema: mongoose.Schema<any, mongoose.Model<any, any, 
         port: string;
     } | undefined;
     domain?: {
+        id: string;
         host: string;
         txtName: string;
         txtValue: string;
@@ -67,6 +68,7 @@ export declare const LabelConfigs: mongoose.Model<{
         port: string;
     } | undefined;
     domain?: {
+        id: string;
         host: string;
         txtName: string;
         txtValue: string;
@@ -91,6 +93,7 @@ export declare const LabelConfigs: mongoose.Model<{
         port: string;
     } | undefined;
     domain?: {
+        id: string;
         host: string;
         txtName: string;
         txtValue: string;
