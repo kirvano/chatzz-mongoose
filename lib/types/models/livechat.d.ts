@@ -39,7 +39,7 @@ declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
     message?: string | undefined;
     status?: {
-        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
+        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
             userId: string;
@@ -64,7 +64,7 @@ export declare const LiveChat: mongoose.Model<{
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
     message?: string | undefined;
     status?: {
-        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
+        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
             userId: string;
@@ -89,7 +89,7 @@ export declare const LiveChat: mongoose.Model<{
     contactOrigin: "message" | "campaigns" | "entry_chatbots" | "dispatches";
     message?: string | undefined;
     status?: {
-        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado";
+        caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
             userId: string;

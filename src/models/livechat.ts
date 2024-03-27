@@ -48,6 +48,7 @@ const ChatSchema = new mongoose.Schema(
           "user", // Em atendimento por um humano
           "resolvido", //Finalizado com sucesso
           "encerrado", //Finalizado sem sucesso
+          "aberto",
         ],
         default: "aguardando",
       },
