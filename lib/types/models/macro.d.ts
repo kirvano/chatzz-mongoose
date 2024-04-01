@@ -30,9 +30,9 @@ declare const MacroSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     updatedAt: NativeDate;
 } & {
     name: string;
+    content: any;
     workspaceId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    content: any;
     author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";
@@ -45,9 +45,9 @@ declare const Macro: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     name: string;
+    content: any;
     workspaceId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    content: any;
     author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";
@@ -60,9 +60,9 @@ declare const Macro: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     name: string;
+    content: any;
     workspaceId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    content: any;
     author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";

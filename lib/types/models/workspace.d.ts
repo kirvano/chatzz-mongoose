@@ -31,6 +31,20 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
 } & {
     userId: mongoose.Types.ObjectId;
     status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    customFields: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
+    tags: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -105,16 +119,44 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
                 viewport?: any;
             }[];
             ctr: number;
+            isShared: boolean;
             name?: string | undefined;
+            shareOptions?: {
+                condition?: {
+                    customFields: boolean;
+                    tags: boolean;
+                } | undefined;
+                content?: {
+                    texts: boolean;
+                    images: boolean;
+                    videos: boolean;
+                    files: boolean;
+                    audios: boolean;
+                    contacts: boolean;
+                } | undefined;
+                menu?: {
+                    questions: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                question?: {
+                    texts: boolean;
+                    audios: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                action?: {
+                    customFields: boolean;
+                    tags: boolean;
+                    services: boolean;
+                    members: boolean;
+                } | undefined;
+                chatbotConnection?: {
+                    flows: boolean;
+                } | undefined;
+            } | undefined;
         }>;
         folderName?: string | undefined;
-    }>;
-    customFields: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     fastReplies: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -122,13 +164,6 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     } & {
         name?: string | undefined;
         reply?: string | undefined;
-    }>;
-    tags: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     campaigns: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -220,6 +255,20 @@ export declare const Workspace: mongoose.Model<{
 } & {
     userId: mongoose.Types.ObjectId;
     status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    customFields: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
+    tags: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -294,16 +343,44 @@ export declare const Workspace: mongoose.Model<{
                 viewport?: any;
             }[];
             ctr: number;
+            isShared: boolean;
             name?: string | undefined;
+            shareOptions?: {
+                condition?: {
+                    customFields: boolean;
+                    tags: boolean;
+                } | undefined;
+                content?: {
+                    texts: boolean;
+                    images: boolean;
+                    videos: boolean;
+                    files: boolean;
+                    audios: boolean;
+                    contacts: boolean;
+                } | undefined;
+                menu?: {
+                    questions: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                question?: {
+                    texts: boolean;
+                    audios: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                action?: {
+                    customFields: boolean;
+                    tags: boolean;
+                    services: boolean;
+                    members: boolean;
+                } | undefined;
+                chatbotConnection?: {
+                    flows: boolean;
+                } | undefined;
+            } | undefined;
         }>;
         folderName?: string | undefined;
-    }>;
-    customFields: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     fastReplies: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -311,13 +388,6 @@ export declare const Workspace: mongoose.Model<{
     } & {
         name?: string | undefined;
         reply?: string | undefined;
-    }>;
-    tags: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     campaigns: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -409,6 +479,20 @@ export declare const Workspace: mongoose.Model<{
 } & {
     userId: mongoose.Types.ObjectId;
     status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    customFields: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
+    tags: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        name?: string | undefined;
+        description?: string | undefined;
+    }>;
     members: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -483,16 +567,44 @@ export declare const Workspace: mongoose.Model<{
                 viewport?: any;
             }[];
             ctr: number;
+            isShared: boolean;
             name?: string | undefined;
+            shareOptions?: {
+                condition?: {
+                    customFields: boolean;
+                    tags: boolean;
+                } | undefined;
+                content?: {
+                    texts: boolean;
+                    images: boolean;
+                    videos: boolean;
+                    files: boolean;
+                    audios: boolean;
+                    contacts: boolean;
+                } | undefined;
+                menu?: {
+                    questions: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                question?: {
+                    texts: boolean;
+                    audios: boolean;
+                    invalidAnswers: boolean;
+                    customFields: boolean;
+                } | undefined;
+                action?: {
+                    customFields: boolean;
+                    tags: boolean;
+                    services: boolean;
+                    members: boolean;
+                } | undefined;
+                chatbotConnection?: {
+                    flows: boolean;
+                } | undefined;
+            } | undefined;
         }>;
         folderName?: string | undefined;
-    }>;
-    customFields: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     fastReplies: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -500,13 +612,6 @@ export declare const Workspace: mongoose.Model<{
     } & {
         name?: string | undefined;
         reply?: string | undefined;
-    }>;
-    tags: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name?: string | undefined;
-        description?: string | undefined;
     }>;
     campaigns: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;

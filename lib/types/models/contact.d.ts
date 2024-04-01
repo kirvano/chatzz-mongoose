@@ -33,10 +33,10 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
         _id: string;
         value: string;
     }[];
-    jid: string;
     tags: {
         _id?: string | undefined;
     }[];
+    jid: string;
     campaigns: {
         _id?: string | undefined;
     }[];
@@ -63,10 +63,10 @@ declare const Contact: mongoose.Model<{
         _id: string;
         value: string;
     }[];
-    jid: string;
     tags: {
         _id?: string | undefined;
     }[];
+    jid: string;
     campaigns: {
         _id?: string | undefined;
     }[];
@@ -93,10 +93,10 @@ declare const Contact: mongoose.Model<{
         _id: string;
         value: string;
     }[];
-    jid: string;
     tags: {
         _id?: string | undefined;
     }[];
+    jid: string;
     campaigns: {
         _id?: string | undefined;
     }[];
