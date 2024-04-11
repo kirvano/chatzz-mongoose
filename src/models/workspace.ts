@@ -5,8 +5,7 @@ const InputFlowSchema = new mongoose.Schema(
     automationId: { type: mongoose.Schema.Types.ObjectId },
     automationType: {
       type: String,
-      enum: ["macro", "chatbot"],
-      default: "chatbot",
+      enum: ["macro", "chatbot", null],
     },
     modifiedBy: { type: mongoose.Schema.Types.ObjectId },
     execution: {
