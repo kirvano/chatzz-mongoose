@@ -34,6 +34,7 @@ export { Plan, PlanSchemaType } from "./models/plan";
 export { Notification, NotificationSchemaType } from "./models/notification";
 export { MessageSchedule, MessageScheduleSchema, MessageScheduleSchemaType, } from "./models/messageSchedule";
 export { Macro, MacroSchema, MacroSchemaType } from "./models/macro";
+export { MacroGroup, MacroGroupSchema, MacroGroupSchemaType } from './models/macroGroup';
 export { Logs, LogsSchemaType } from "./models/logs";
 export { LiveChat, ChatSchemaType } from "./models/livechat";
 export { IntegrationLogs, IntegrationLogsSchema, IntegrationLogsSchemaType, } from "./models/integrationLogs";

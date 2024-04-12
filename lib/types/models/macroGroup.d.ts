@@ -23,38 +23,36 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
-declare const MacroSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+declare const MacroGroupSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
     name: string;
-    content: any;
     workspaceId: mongoose.Types.ObjectId;
-    groupId: mongoose.Types.ObjectId;
-    category: "text" | "document" | "image" | "video" | "audio" | "script";
     author: mongoose.Types.ObjectId;
-    availability?: {
-        condition: "public" | "private";
-        users: mongoose.Types.ObjectId[];
+    isDeleted: boolean;
+    color?: {
+        name: string;
+        hex: string;
     } | undefined;
+    deletedBy?: mongoose.Types.ObjectId | undefined;
 }>;
-type MacroSchemaType = mongoose.InferSchemaType<typeof MacroSchema>;
-declare const Macro: mongoose.Model<{
+type MacroGroupSchemaType = mongoose.InferSchemaType<typeof MacroGroupSchema>;
+declare const MacroGroup: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
     name: string;
-    content: any;
     workspaceId: mongoose.Types.ObjectId;
-    groupId: mongoose.Types.ObjectId;
-    category: "text" | "document" | "image" | "video" | "audio" | "script";
     author: mongoose.Types.ObjectId;
-    availability?: {
-        condition: "public" | "private";
-        users: mongoose.Types.ObjectId[];
+    isDeleted: boolean;
+    color?: {
+        name: string;
+        hex: string;
     } | undefined;
+    deletedBy?: mongoose.Types.ObjectId | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -62,14 +60,13 @@ declare const Macro: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     name: string;
-    content: any;
     workspaceId: mongoose.Types.ObjectId;
-    groupId: mongoose.Types.ObjectId;
-    category: "text" | "document" | "image" | "video" | "audio" | "script";
     author: mongoose.Types.ObjectId;
-    availability?: {
-        condition: "public" | "private";
-        users: mongoose.Types.ObjectId[];
+    isDeleted: boolean;
+    color?: {
+        name: string;
+        hex: string;
     } | undefined;
+    deletedBy?: mongoose.Types.ObjectId | undefined;
 }>>;
-export { MacroSchema, Macro, MacroSchemaType };
+export { MacroGroupSchema, MacroGroup, MacroGroupSchemaType };
