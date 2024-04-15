@@ -77,6 +77,8 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        startTransmission: Date;
+        finishTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
@@ -301,6 +303,8 @@ export declare const Workspace: mongoose.Model<{
         status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        startTransmission: Date;
+        finishTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
@@ -525,6 +529,8 @@ export declare const Workspace: mongoose.Model<{
         status: "executing" | "paused" | "stopped";
         schedulingId: string;
         delay: string;
+        startTransmission: Date;
+        finishTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
