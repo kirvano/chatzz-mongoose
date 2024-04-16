@@ -1,30 +1,27 @@
 import mongoose from "mongoose";
 
+const InputFlowSchema = new mongoose.Schema(
+  {
+    automationId: { type: mongoose.Schema.Types.ObjectId },
+    automationType: {
+      type: String,
+      enum: ["macro", "chatbot", null],
+    },
+    modifiedBy: { type: mongoose.Schema.Types.ObjectId },
+    execution: {
+      type: Number,
+      default: 0,
+    },
+    waitUntil: { type: Number, default: 0 },
+  },
+  { timestamps: true }
+);
+
 const WorkspaceInputFlowSchema = new mongoose.Schema(
   {
-    welcome: {
-      chatbotId: { type: mongoose.Schema.Types.ObjectId },
-      execution: {
-        type: Number,
-        default: 0,
-      },
-    },
-    main: {
-      chatbotId: { type: mongoose.Schema.Types.ObjectId },
-      execution: {
-        type: Number,
-        default: 0,
-      },
-      waitUntil: { type: Number, default: 0 },
-    },
-    afk: {
-      chatbotId: { type: mongoose.Schema.Types.ObjectId },
-      waitUntil: { type: Number, default: 0 },
-      execution: {
-        type: Number,
-        default: 0,
-      },
-    },
+    welcome: InputFlowSchema,
+    main: InputFlowSchema,
+    afk: InputFlowSchema,
   },
   { timestamps: true }
 );
@@ -131,6 +128,8 @@ const WorkspaceTransmissionSchema = new mongoose.Schema(
       enum: ["executing", "paused", "stopped"],
       default: "stopped",
     },
+    startTransmission: { type: Date, default: null },
+    endTransmission: { type: Date, default: null },
     remainingPhoneList: { type: [String] },
     phoneList: [
       {

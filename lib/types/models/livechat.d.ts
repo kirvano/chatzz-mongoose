@@ -42,8 +42,8 @@ declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
-            userId: string;
             updatedAt: Date;
+            userId: string;
         } | undefined;
     } | undefined;
     jid?: string | undefined;
@@ -67,8 +67,8 @@ export declare const LiveChat: mongoose.Model<{
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
-            userId: string;
             updatedAt: Date;
+            userId: string;
         } | undefined;
     } | undefined;
     jid?: string | undefined;
@@ -92,8 +92,8 @@ export declare const LiveChat: mongoose.Model<{
         caption: "user" | "aguardando" | "bot" | "resolvido" | "encerrado" | "aberto";
         origin: "user" | "bot";
         updatedBy?: {
-            userId: string;
             updatedAt: Date;
+            userId: string;
         } | undefined;
     } | undefined;
     jid?: string | undefined;
