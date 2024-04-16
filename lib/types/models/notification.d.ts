@@ -30,8 +30,8 @@ declare const NotificationSchema: mongoose.Schema<any, mongoose.Model<any, any, 
     updatedAt: NativeDate;
 } & {
     type: "workspace_invite";
-    userId: mongoose.Types.ObjectId;
     read: boolean;
+    userId: mongoose.Types.ObjectId;
     data?: any;
 }>;
 export type NotificationSchemaType = mongoose.InferSchemaType<typeof NotificationSchema>;
@@ -40,8 +40,8 @@ export declare const Notification: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "workspace_invite";
-    userId: mongoose.Types.ObjectId;
     read: boolean;
+    userId: mongoose.Types.ObjectId;
     data?: any;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
@@ -50,8 +50,8 @@ export declare const Notification: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "workspace_invite";
-    userId: mongoose.Types.ObjectId;
     read: boolean;
+    userId: mongoose.Types.ObjectId;
     data?: any;
 }>>;
 export {};

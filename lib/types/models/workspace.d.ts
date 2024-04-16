@@ -226,20 +226,36 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        welcome?: {
-            execution: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        main?: {
-            execution: number;
-            waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        afk?: {
+        welcome?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
             execution: number;
             waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        main?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        afk?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
@@ -452,20 +468,36 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        welcome?: {
-            execution: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        main?: {
-            execution: number;
-            waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        afk?: {
+        welcome?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
             execution: number;
             waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        main?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        afk?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
@@ -678,20 +710,36 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        welcome?: {
-            execution: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        main?: {
-            execution: number;
-            waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
-        afk?: {
+        welcome?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
             execution: number;
             waitUntil: number;
-            chatbotId?: mongoose.Types.ObjectId | undefined;
-        } | undefined;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        main?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
+        afk?: ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            execution: number;
+            waitUntil: number;
+            automationId?: mongoose.Types.ObjectId | undefined;
+            automationType?: "macro" | "chatbot" | undefined;
+            modifiedBy?: mongoose.Types.ObjectId | undefined;
+        }) | undefined;
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
