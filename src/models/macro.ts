@@ -17,6 +17,7 @@ const MacroSchema = new mongoose.Schema(
       },
       users: [mongoose.Schema.Types.ObjectId],
     },
+    groupId: { type: mongoose.Schema.Types.ObjectId, default: null },
     content: { type: mongoose.Schema.Types.Mixed, required: true },
     author: { type: mongoose.Schema.Types.ObjectId, required: true },
   },

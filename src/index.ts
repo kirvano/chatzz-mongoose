@@ -37,6 +37,8 @@ export {
 
 export { Macro, MacroSchema, MacroSchemaType } from "./models/macro";
 
+export { MacroGroup, MacroGroupSchema, MacroGroupSchemaType } from './models/macroGroup'
+
 export { Logs, LogsSchemaType } from "./models/logs";
 
 export { LiveChat, ChatSchemaType } from "./models/livechat";
