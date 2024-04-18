@@ -36,6 +36,7 @@ declare const LabelConfigsSchema: mongoose.Schema<any, mongoose.Model<any, any, 
     favicon: string;
     loginBanner: string;
     helpLink: string;
+    helpIcon: string;
     email?: {
         user: string;
         password: string;
@@ -61,6 +62,7 @@ export declare const LabelConfigs: mongoose.Model<{
     favicon: string;
     loginBanner: string;
     helpLink: string;
+    helpIcon: string;
     email?: {
         user: string;
         password: string;
@@ -86,6 +88,7 @@ export declare const LabelConfigs: mongoose.Model<{
     favicon: string;
     loginBanner: string;
     helpLink: string;
+    helpIcon: string;
     email?: {
         user: string;
         password: string;
