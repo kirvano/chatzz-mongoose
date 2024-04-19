@@ -16,7 +16,15 @@ const IntegrationLogsSchema = new mongoose.Schema(
   {
     integrationId: { type: mongoose.Schema.Types.ObjectId, required: true },
     events: [LogsSchema],
-    payloads: [{ type: mongoose.Schema.Types.Mixed, maxlength: 50 }],
+    message: { type: String, required: true },
+    code: { type: String, default: "" },
+    payload: { type: String, default: "" },
+    type: {
+      type: String,
+      enum: ["error", "info", "warning", "reprocessed"],
+      default: "info",
+    },
+    reprocessParentId: { type: mongoose.Schema.Types.ObjectId },
   },
   { timestamps: true }
 );

@@ -78,7 +78,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         schedulingId: string;
         delay: string;
         startTransmission: Date;
-        finishTransmission: Date;
+        endTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
@@ -233,7 +233,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         main?: ({
@@ -243,7 +243,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         afk?: ({
@@ -253,7 +253,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
     }) | undefined;
@@ -320,7 +320,7 @@ export declare const Workspace: mongoose.Model<{
         schedulingId: string;
         delay: string;
         startTransmission: Date;
-        finishTransmission: Date;
+        endTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
@@ -475,7 +475,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         main?: ({
@@ -485,7 +485,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         afk?: ({
@@ -495,7 +495,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
     }) | undefined;
@@ -562,7 +562,7 @@ export declare const Workspace: mongoose.Model<{
         schedulingId: string;
         delay: string;
         startTransmission: Date;
-        finishTransmission: Date;
+        endTransmission: Date;
         remainingPhoneList: string[];
         phoneList: {
             sent: boolean;
@@ -717,7 +717,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         main?: ({
@@ -727,7 +727,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
         afk?: ({
@@ -737,7 +737,7 @@ export declare const Workspace: mongoose.Model<{
             execution: number;
             waitUntil: number;
             automationId?: mongoose.Types.ObjectId | undefined;
-            automationType?: "macro" | "chatbot" | undefined;
+            automationType?: "macro" | "chatbot" | null | undefined;
             modifiedBy?: mongoose.Types.ObjectId | undefined;
         }) | undefined;
     }) | undefined;
