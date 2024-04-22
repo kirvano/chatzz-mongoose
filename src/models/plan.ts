@@ -18,6 +18,9 @@ const PlanSchema = new mongoose.Schema(
     massShooting: {
       type: Number,
     },
+    webhookExecutions: {
+      type: Number,
+    },
     active: {
       type: Boolean,
       default: false,

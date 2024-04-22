@@ -15,6 +15,7 @@ const LogsSchema = new mongoose.Schema(
 const IntegrationLogsSchema = new mongoose.Schema(
   {
     integrationId: { type: mongoose.Schema.Types.ObjectId, required: true },
+    workspaceId: { type: mongoose.Schema.Types.ObjectId },
     events: [LogsSchema],
     message: { type: String, required: true },
     code: { type: String, default: "" },
