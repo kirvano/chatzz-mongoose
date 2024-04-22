@@ -29,6 +29,9 @@ declare const IntegrationLogsSchema: mongoose.Schema<any, mongoose.Model<any, an
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "error" | "info" | "warning" | "reprocessed";
+    message: string;
+    code: string;
     integrationId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -37,13 +40,18 @@ declare const IntegrationLogsSchema: mongoose.Schema<any, mongoose.Model<any, an
         type: "error" | "info" | "warning";
         message: string;
     }>;
-    payloads: any[];
+    payload: string;
+    workspaceId?: mongoose.Types.ObjectId | undefined;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>;
 type IntegrationLogsSchemaType = mongoose.InferSchemaType<typeof IntegrationLogsSchema>;
 declare const IntegrationLogs: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "error" | "info" | "warning" | "reprocessed";
+    message: string;
+    code: string;
     integrationId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -52,13 +60,18 @@ declare const IntegrationLogs: mongoose.Model<{
         type: "error" | "info" | "warning";
         message: string;
     }>;
-    payloads: any[];
+    payload: string;
+    workspaceId?: mongoose.Types.ObjectId | undefined;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "error" | "info" | "warning" | "reprocessed";
+    message: string;
+    code: string;
     integrationId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -67,6 +80,8 @@ declare const IntegrationLogs: mongoose.Model<{
         type: "error" | "info" | "warning";
         message: string;
     }>;
-    payloads: any[];
+    payload: string;
+    workspaceId?: mongoose.Types.ObjectId | undefined;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>>;
 export { IntegrationLogsSchema, IntegrationLogs, IntegrationLogsSchemaType };

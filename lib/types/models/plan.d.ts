@@ -47,6 +47,7 @@ declare const PlanSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     price?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
+    webhookExecutions?: number | undefined;
 }>;
 export type PlanSchemaType = mongoose.InferSchemaType<typeof PlanSchema>;
 export declare const Plan: mongoose.Model<{
@@ -71,6 +72,7 @@ export declare const Plan: mongoose.Model<{
     price?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
+    webhookExecutions?: number | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -95,5 +97,6 @@ export declare const Plan: mongoose.Model<{
     price?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
+    webhookExecutions?: number | undefined;
 }>>;
 export {};
