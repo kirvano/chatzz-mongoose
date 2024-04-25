@@ -9,6 +9,7 @@ const LabelConfigsSchema = new mongoose.Schema(
     favicon: { type: String, default: "" },
     loginBanner: { type: String, default: "" },
     helpLink: { type: String, default: "" },
+    helpIcon: { type: String, default: "" },
     email: {
       user: { type: String, default: "" },
       password: { type: String, default: "" },

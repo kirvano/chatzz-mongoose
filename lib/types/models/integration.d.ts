@@ -54,6 +54,16 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     icon: string;
     executions: number;
     direction: "input" | "output";
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }>;
 type IntegrationSchemaType = mongoose.InferSchemaType<typeof IntegrationSchema>;
 declare const Integration: mongoose.Model<{
@@ -85,6 +95,16 @@ declare const Integration: mongoose.Model<{
     icon: string;
     executions: number;
     direction: "input" | "output";
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -116,5 +136,15 @@ declare const Integration: mongoose.Model<{
     icon: string;
     executions: number;
     direction: "input" | "output";
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }>>;
 export { IntegrationSchema, Integration, IntegrationSchemaType };

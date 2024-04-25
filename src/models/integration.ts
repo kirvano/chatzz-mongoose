@@ -22,6 +22,16 @@ const EventMapper = new mongoose.Schema(
   { timestamps: true }
 );
 
+const ReprocessConfigSchema = new mongoose.Schema(
+  {
+    delay: { type: Number, required: true, default: 1 },
+    order: { type: String, required: true, default: "asc" },
+    interval: { type: Number, required: true, default: 7 },
+    allowedCodes: { type: [String], required: true, default: [] },
+  },
+  { timestamps: true }
+);
+
 const IntegrationSchema = new mongoose.Schema(
   {
     workspaceId: { type: mongoose.Schema.Types.ObjectId, required: true },
@@ -30,6 +40,12 @@ const IntegrationSchema = new mongoose.Schema(
     executions: { type: Number, default: 0 },
     direction: { type: String, required: true, enum: ["input", "output"] },
     type: { type: String, enum: ["webhooks"], required: true },
+    reprocessConfigs: ReprocessConfigSchema,
+    reprocessStatus: {
+      type: String,
+      enum: ["executing", "stopped", "stopping"],
+      default: "stopped",
+    },
     fields: [FieldMapper],
     active: { type: Boolean, default: false },
     events: [EventMapper],

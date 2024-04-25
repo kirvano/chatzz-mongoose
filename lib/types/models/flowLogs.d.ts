@@ -34,9 +34,9 @@ declare const FlowLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any,
     flowId?: mongoose.Types.ObjectId | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    payload?: string | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
-    payload?: string | undefined;
 }>;
 type FlowLogsSchemaType = mongoose.InferSchemaType<typeof FlowLogsSchema>;
 declare const FlowLogs: mongoose.Model<{
@@ -48,9 +48,9 @@ declare const FlowLogs: mongoose.Model<{
     flowId?: mongoose.Types.ObjectId | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    payload?: string | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
-    payload?: string | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -62,8 +62,8 @@ declare const FlowLogs: mongoose.Model<{
     flowId?: mongoose.Types.ObjectId | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    payload?: string | undefined;
     stepId?: mongoose.Types.ObjectId | undefined;
     stack?: string | undefined;
-    payload?: string | undefined;
 }>>;
 export { FlowLogsSchema, FlowLogs, FlowLogsSchemaType };
