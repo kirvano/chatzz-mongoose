@@ -37,7 +37,11 @@ export {
 
 export { Macro, MacroSchema, MacroSchemaType } from "./models/macro";
 
-export { MacroGroup, MacroGroupSchema, MacroGroupSchemaType } from './models/macroGroup'
+export {
+  MacroGroup,
+  MacroGroupSchema,
+  MacroGroupSchemaType,
+} from "./models/macroGroup";
 
 export { Logs, LogsSchemaType } from "./models/logs";
 
@@ -89,3 +93,15 @@ export {
 } from "./models/flowLogs";
 
 export { LabelConfigs, LabelConfigsSchemaType } from "./models/labelConfigs";
+
+export {
+  Platform,
+  PlatformsSchema,
+  PlatformsSchemaType,
+} from "./models/platforms";
+
+export {
+  PlatformLogs,
+  PlatformLogsSchema,
+  PlatformLogsSchemaType,
+} from "./models/platformsLogs";

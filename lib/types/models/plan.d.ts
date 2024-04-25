@@ -29,9 +29,9 @@ declare const PlanSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "internal" | "external";
     active: boolean;
     visibility: "visible" | "only_checkout";
-    chargeFrequency: number;
     freeDays: number;
     support: boolean;
     accountManager: boolean;
@@ -45,6 +45,8 @@ declare const PlanSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     name?: string | undefined;
     description?: string | undefined;
     price?: number | undefined;
+    checkoutURL?: string | undefined;
+    chargeFrequency?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
 }>;
@@ -53,9 +55,9 @@ export declare const Plan: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "internal" | "external";
     active: boolean;
     visibility: "visible" | "only_checkout";
-    chargeFrequency: number;
     freeDays: number;
     support: boolean;
     accountManager: boolean;
@@ -69,6 +71,8 @@ export declare const Plan: mongoose.Model<{
     name?: string | undefined;
     description?: string | undefined;
     price?: number | undefined;
+    checkoutURL?: string | undefined;
+    chargeFrequency?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
@@ -77,9 +81,9 @@ export declare const Plan: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    type: "internal" | "external";
     active: boolean;
     visibility: "visible" | "only_checkout";
-    chargeFrequency: number;
     freeDays: number;
     support: boolean;
     accountManager: boolean;
@@ -93,6 +97,8 @@ export declare const Plan: mongoose.Model<{
     name?: string | undefined;
     description?: string | undefined;
     price?: number | undefined;
+    checkoutURL?: string | undefined;
+    chargeFrequency?: number | undefined;
     attendants?: number | undefined;
     massShooting?: number | undefined;
 }>>;
