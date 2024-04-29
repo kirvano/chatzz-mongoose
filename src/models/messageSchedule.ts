@@ -8,7 +8,7 @@ const MessageScheduleSchema = new mongoose.Schema(
     groupId: { type: mongoose.Schema.Types.ObjectId },
     jobId: { type: String, required: true },
     scheduledAt: { type: Date, required: true },
-    type: { type: String, enum: ["text", "macro"], required: true },
+    type: { type: String, enum: ["text", "macro", "chatbot"], required: true },
     data: { type: mongoose.Schema.Types.Mixed, required: true },
   },
   { timestamps: true }
