@@ -29,7 +29,7 @@ declare const MessageScheduleSchema: mongoose.Schema<any, mongoose.Model<any, an
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "text" | "macro";
+    type: "text" | "macro" | "chatbot";
     userId: mongoose.Types.ObjectId;
     data: any;
     workspaceId: mongoose.Types.ObjectId;
@@ -43,7 +43,7 @@ declare const MessageSchedule: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "text" | "macro";
+    type: "text" | "macro" | "chatbot";
     userId: mongoose.Types.ObjectId;
     data: any;
     workspaceId: mongoose.Types.ObjectId;
@@ -57,7 +57,7 @@ declare const MessageSchedule: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "text" | "macro";
+    type: "text" | "macro" | "chatbot";
     userId: mongoose.Types.ObjectId;
     data: any;
     workspaceId: mongoose.Types.ObjectId;

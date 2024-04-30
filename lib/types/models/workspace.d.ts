@@ -50,13 +50,8 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         updatedAt: NativeDate;
     } & {
         allowedPaths: string[];
+        privacy: "allConversations" | "ownerNotDefinedConversation" | "onlyConversationOwner";
         role: "admin" | "user";
-        privacy?: ({
-            createdAt: NativeDate;
-            updatedAt: NativeDate;
-        } & {
-            allMessages: boolean;
-        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{
@@ -292,13 +287,8 @@ export declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         allowedPaths: string[];
+        privacy: "allConversations" | "ownerNotDefinedConversation" | "onlyConversationOwner";
         role: "admin" | "user";
-        privacy?: ({
-            createdAt: NativeDate;
-            updatedAt: NativeDate;
-        } & {
-            allMessages: boolean;
-        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{
@@ -534,13 +524,8 @@ export declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         allowedPaths: string[];
+        privacy: "allConversations" | "ownerNotDefinedConversation" | "onlyConversationOwner";
         role: "admin" | "user";
-        privacy?: ({
-            createdAt: NativeDate;
-            updatedAt: NativeDate;
-        } & {
-            allMessages: boolean;
-        }) | undefined;
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
     sequenceList: mongoose.Types.DocumentArray<{
