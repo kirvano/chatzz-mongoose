@@ -136,6 +136,10 @@ const WorkspaceTransmissionSchema = new mongoose.Schema(
       enum: ["executing", "paused", "stopped"],
       default: "stopped",
     },
+    hasStopped: {
+      type: Boolean,
+      default: false,
+    },
     startTransmission: { type: Date, default: null },
     endTransmission: { type: Date, default: null },
     remainingPhoneList: { type: [String] },
