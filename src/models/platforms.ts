@@ -19,12 +19,28 @@ const EventMapper = new mongoose.Schema(
   { timestamps: true }
 );
 
+const ReprocessConfigSchema = new mongoose.Schema(
+  {
+    delay: { type: Number, required: true, default: 1 },
+    order: { type: String, required: true, default: "asc" },
+    interval: { type: Number, required: true, default: 7 },
+    allowedCodes: { type: [String], required: true, default: [] },
+  },
+  { timestamps: true }
+);
+
 const PlatformsSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     icon: { type: String, required: true },
     plan: { type: mongoose.Schema.Types.ObjectId, required: true },
     executions: { type: Number, default: 0 },
+    reprocessConfigs: ReprocessConfigSchema,
+    reprocessStatus: {
+      type: String,
+      enum: ["executing", "stopped", "stopping"],
+      default: "stopped",
+    },
     fields: [FieldMapper],
     active: { type: Boolean, default: false },
     events: [EventMapper],

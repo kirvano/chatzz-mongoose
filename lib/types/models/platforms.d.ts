@@ -47,6 +47,16 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     }>;
     icon: string;
     executions: number;
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }>;
 type PlatformsSchemaType = mongoose.InferSchemaType<typeof PlatformsSchema>;
 declare const Platform: mongoose.Model<{
@@ -71,6 +81,16 @@ declare const Platform: mongoose.Model<{
     }>;
     icon: string;
     executions: number;
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -95,5 +115,15 @@ declare const Platform: mongoose.Model<{
     }>;
     icon: string;
     executions: number;
+    reprocessStatus: "executing" | "stopped" | "stopping";
+    reprocessConfigs?: ({
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        delay: number;
+        order: string;
+        interval: number;
+        allowedCodes: string[];
+    }) | undefined;
 }>>;
 export { PlatformsSchema, Platform, PlatformsSchemaType };

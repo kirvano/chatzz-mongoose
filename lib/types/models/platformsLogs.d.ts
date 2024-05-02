@@ -34,6 +34,7 @@ declare const PlatformLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, 
     code: string;
     payload: string;
     platformId: mongoose.Types.ObjectId;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>;
 type PlatformLogsSchemaType = mongoose.InferSchemaType<typeof PlatformLogsSchema>;
 declare const PlatformLogs: mongoose.Model<{
@@ -45,6 +46,7 @@ declare const PlatformLogs: mongoose.Model<{
     code: string;
     payload: string;
     platformId: mongoose.Types.ObjectId;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -56,5 +58,6 @@ declare const PlatformLogs: mongoose.Model<{
     code: string;
     payload: string;
     platformId: mongoose.Types.ObjectId;
+    reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>>;
 export { PlatformLogsSchema, PlatformLogs, PlatformLogsSchemaType };

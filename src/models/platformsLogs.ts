@@ -12,6 +12,7 @@ const PlatformLogsSchema = new mongoose.Schema(
       default: "info",
       required: true,
     },
+    reprocessParentId: { type: mongoose.Schema.Types.ObjectId },
   },
   { timestamps: true }
 );
