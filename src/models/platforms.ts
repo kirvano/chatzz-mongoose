@@ -12,7 +12,7 @@ const EventMapper = new mongoose.Schema(
     identification: { type: String, required: true },
     action: {
       type: String,
-      enum: ["pay", "cancel", "inactivate"],
+      enum: ["active_status", "blocked"],
       required: true,
     },
   },
