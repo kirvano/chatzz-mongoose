@@ -42,7 +42,7 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         updatedAt: NativeDate;
     } & {
         name: string;
-        action: "pay" | "cancel" | "inactivate";
+        action: "blocked" | "active_status";
         identification: string;
     }>;
     icon: string;
@@ -76,7 +76,7 @@ declare const Platform: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         name: string;
-        action: "pay" | "cancel" | "inactivate";
+        action: "blocked" | "active_status";
         identification: string;
     }>;
     icon: string;
@@ -110,7 +110,7 @@ declare const Platform: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         name: string;
-        action: "pay" | "cancel" | "inactivate";
+        action: "blocked" | "active_status";
         identification: string;
     }>;
     icon: string;
