@@ -133,7 +133,14 @@ const WorkspaceTransmissionSchema = new mongoose.Schema(
     delay: { type: String, default: "1" },
     status: {
       type: String,
-      enum: ["executing", "paused", "stopped"],
+      enum: [
+        "executing",
+        "paused",
+        "stopped",
+        "pausing",
+        "stopping",
+        "finished",
+      ],
       default: "stopped",
     },
     hasStopped: {
