@@ -69,7 +69,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        status: "executing" | "paused" | "stopped";
+        status: "executing" | "paused" | "stopped" | "pausing" | "stopping" | "finished";
         schedulingId: string;
         delay: string;
         hasStopped: boolean;
@@ -307,7 +307,7 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        status: "executing" | "paused" | "stopped";
+        status: "executing" | "paused" | "stopped" | "pausing" | "stopping" | "finished";
         schedulingId: string;
         delay: string;
         hasStopped: boolean;
@@ -545,7 +545,7 @@ export declare const Workspace: mongoose.Model<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
-        status: "executing" | "paused" | "stopped";
+        status: "executing" | "paused" | "stopped" | "pausing" | "stopping" | "finished";
         schedulingId: string;
         delay: string;
         hasStopped: boolean;
