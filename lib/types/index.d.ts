@@ -34,7 +34,7 @@ export { Plan, PlanSchemaType } from "./models/plan";
 export { Notification, NotificationSchemaType } from "./models/notification";
 export { MessageSchedule, MessageScheduleSchema, MessageScheduleSchemaType, } from "./models/messageSchedule";
 export { Macro, MacroSchema, MacroSchemaType } from "./models/macro";
-export { MacroGroup, MacroGroupSchema, MacroGroupSchemaType } from './models/macroGroup';
+export { MacroGroup, MacroGroupSchema, MacroGroupSchemaType, } from "./models/macroGroup";
 export { Logs, LogsSchemaType } from "./models/logs";
 export { LiveChat, ChatSchemaType } from "./models/livechat";
 export { IntegrationLogs, IntegrationLogsSchema, IntegrationLogsSchemaType, } from "./models/integrationLogs";
@@ -49,3 +49,5 @@ export { BusinessGroup, BusinessGroupSchema, BusinessGroupSchemaType, } from "./
 export { AwaitingResponse, AwaitingResponseSchemaType, } from "./models/AwaitingResponse";
 export { FlowLogs, FlowLogsSchema, FlowLogsSchemaType, } from "./models/flowLogs";
 export { LabelConfigs, LabelConfigsSchemaType } from "./models/labelConfigs";
+export { Platform, PlatformsSchema, PlatformsSchemaType, } from "./models/platforms";
+export { PlatformLogs, PlatformLogsSchema, PlatformLogsSchemaType, } from "./models/platformsLogs";

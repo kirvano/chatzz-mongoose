@@ -10,7 +10,13 @@ const PlanSchema = new mongoose.Schema(
       enum: ["visible", "only_checkout"],
       default: "visible",
     },
-    chargeFrequency: { type: Number, required: true },
+    type: {
+      type: String,
+      enum: ["internal", "external"],
+      default: "internal",
+    },
+    checkoutURL: { type: String },
+    chargeFrequency: { type: Number },
     freeDays: { type: Number, default: 0 },
     attendants: {
       type: Number,
