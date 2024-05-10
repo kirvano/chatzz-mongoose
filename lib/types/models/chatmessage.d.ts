@@ -41,6 +41,13 @@ declare const MessageSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     msgId?: string | undefined;
     url?: string | undefined;
     quotedMessage?: string | undefined;
+    additionalInfo?: {
+        workspaceId?: mongoose.Types.ObjectId | undefined;
+        senderInfo?: {
+            id?: mongoose.Types.ObjectId | undefined;
+            name?: string | undefined;
+        } | undefined;
+    } | undefined;
     repliedMsgId?: string | undefined;
 }>;
 export type MessageSchemaType = mongoose.InferSchemaType<typeof MessageSchema>;
@@ -60,6 +67,13 @@ export declare const ChatMessage: mongoose.Model<{
     msgId?: string | undefined;
     url?: string | undefined;
     quotedMessage?: string | undefined;
+    additionalInfo?: {
+        workspaceId?: mongoose.Types.ObjectId | undefined;
+        senderInfo?: {
+            id?: mongoose.Types.ObjectId | undefined;
+            name?: string | undefined;
+        } | undefined;
+    } | undefined;
     repliedMsgId?: string | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
@@ -79,6 +93,13 @@ export declare const ChatMessage: mongoose.Model<{
     msgId?: string | undefined;
     url?: string | undefined;
     quotedMessage?: string | undefined;
+    additionalInfo?: {
+        workspaceId?: mongoose.Types.ObjectId | undefined;
+        senderInfo?: {
+            id?: mongoose.Types.ObjectId | undefined;
+            name?: string | undefined;
+        } | undefined;
+    } | undefined;
     repliedMsgId?: string | undefined;
 }>>;
 export {};

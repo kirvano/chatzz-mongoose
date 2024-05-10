@@ -54,6 +54,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         role: "admin" | "user";
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
+    chatRecognition: "noRecognition" | "onlyAdminRecognition" | "allRecognition";
     sequenceList: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -292,6 +293,7 @@ export declare const Workspace: mongoose.Model<{
         role: "admin" | "user";
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
+    chatRecognition: "noRecognition" | "onlyAdminRecognition" | "allRecognition";
     sequenceList: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -530,6 +532,7 @@ export declare const Workspace: mongoose.Model<{
         role: "admin" | "user";
         userId?: mongoose.Types.ObjectId | undefined;
     }>;
+    chatRecognition: "noRecognition" | "onlyAdminRecognition" | "allRecognition";
     sequenceList: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
