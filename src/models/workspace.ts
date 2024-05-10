@@ -26,13 +26,6 @@ const WorkspaceInputFlowSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// const WorkspaceMemberPrivacySchema = new mongoose.Schema(
-//   {
-//     allMessages: { type: Boolean, default: false },
-//   },
-//   { timestamps: true }
-// );
-
 const WorkspaceMemberSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
@@ -355,6 +348,11 @@ const WorkspaceSchema = new mongoose.Schema(
     endsTrial: { type: Date },
     canceledAt: { type: Date },
     members: [WorkspaceMemberSchema],
+    chatRecognition: {
+      type: String,
+      enum: ["noRecognition", "onlyAdminRecognition", "allRecognition"],
+      default: "noRecognition",
+    },
     plan: WorkspacePlanSchema,
     sequenceList: [WorkspaceSequenceSchema],
     transmissionsList: [WorkspaceTransmissionSchema],

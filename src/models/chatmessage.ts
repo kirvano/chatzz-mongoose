@@ -36,6 +36,13 @@ const MessageSchema = new mongoose.Schema(
     read: {
       type: Boolean,
     },
+    additionalInfo: {
+      senderInfo : {
+        id: { type: mongoose.Schema.Types.ObjectId},
+        name: { type: String }
+      },
+      workspaceId: { type: mongoose.Schema.Types.ObjectId },
+    },
     repliedMsgId: { type: String },
     date: { type: Date, default: Date.now },
   },
