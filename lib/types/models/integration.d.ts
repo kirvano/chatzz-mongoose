@@ -54,6 +54,13 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     icon: string;
     executions: number;
     direction: "input" | "output";
+    body: mongoose.Types.DocumentArray<{
+        name: string;
+        identification: string;
+        payloadFieldName: string;
+        isCustomField: boolean;
+        optional: boolean;
+    }>;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
         createdAt: NativeDate;
@@ -64,6 +71,8 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         interval: number;
         allowedCodes: string[];
     }) | undefined;
+    headers?: any;
+    externalURL?: string | undefined;
 }>;
 type IntegrationSchemaType = mongoose.InferSchemaType<typeof IntegrationSchema>;
 declare const Integration: mongoose.Model<{
@@ -95,6 +104,13 @@ declare const Integration: mongoose.Model<{
     icon: string;
     executions: number;
     direction: "input" | "output";
+    body: mongoose.Types.DocumentArray<{
+        name: string;
+        identification: string;
+        payloadFieldName: string;
+        isCustomField: boolean;
+        optional: boolean;
+    }>;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
         createdAt: NativeDate;
@@ -105,6 +121,8 @@ declare const Integration: mongoose.Model<{
         interval: number;
         allowedCodes: string[];
     }) | undefined;
+    headers?: any;
+    externalURL?: string | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -136,6 +154,13 @@ declare const Integration: mongoose.Model<{
     icon: string;
     executions: number;
     direction: "input" | "output";
+    body: mongoose.Types.DocumentArray<{
+        name: string;
+        identification: string;
+        payloadFieldName: string;
+        isCustomField: boolean;
+        optional: boolean;
+    }>;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
         createdAt: NativeDate;
@@ -146,5 +171,7 @@ declare const Integration: mongoose.Model<{
         interval: number;
         allowedCodes: string[];
     }) | undefined;
+    headers?: any;
+    externalURL?: string | undefined;
 }>>;
 export { IntegrationSchema, Integration, IntegrationSchemaType };
