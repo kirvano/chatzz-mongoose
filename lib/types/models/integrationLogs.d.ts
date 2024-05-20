@@ -41,6 +41,8 @@ declare const IntegrationLogsSchema: mongoose.Schema<any, mongoose.Model<any, an
         message: string;
     }>;
     payload: string;
+    sentPayload: string;
+    statusCode: number;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>;
@@ -61,6 +63,8 @@ declare const IntegrationLogs: mongoose.Model<{
         message: string;
     }>;
     payload: string;
+    sentPayload: string;
+    statusCode: number;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
@@ -81,6 +85,8 @@ declare const IntegrationLogs: mongoose.Model<{
         message: string;
     }>;
     payload: string;
+    sentPayload: string;
+    statusCode: number;
     workspaceId?: mongoose.Types.ObjectId | undefined;
     reprocessParentId?: mongoose.Types.ObjectId | undefined;
 }>>;
