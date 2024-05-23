@@ -23,65 +23,43 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
-declare const FunnelSalesSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+export declare const ContactAnnotationSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    status: number;
-    name: string;
+    text: string;
     workspaceId: mongoose.Types.ObjectId;
-    author: mongoose.Types.ObjectId;
-    steps: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
+    contactId: mongoose.Types.ObjectId;
+    author?: {
+        _id: mongoose.Types.ObjectId;
         name: string;
-        color: {
-            name: string;
-            hex: string;
-        };
-    }>;
+    } | undefined;
 }>;
-type FunnelSalesSchemaType = mongoose.InferSchemaType<typeof FunnelSalesSchema>;
-declare const FunnelSales: mongoose.Model<{
+export type ContactAnnotationSchemaType = mongoose.InferSchemaType<typeof ContactAnnotationSchema>;
+export declare const ContactAnnotation: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    status: number;
-    name: string;
+    text: string;
     workspaceId: mongoose.Types.ObjectId;
-    author: mongoose.Types.ObjectId;
-    steps: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
+    contactId: mongoose.Types.ObjectId;
+    author?: {
+        _id: mongoose.Types.ObjectId;
         name: string;
-        color: {
-            name: string;
-            hex: string;
-        };
-    }>;
+    } | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    status: number;
-    name: string;
+    text: string;
     workspaceId: mongoose.Types.ObjectId;
-    author: mongoose.Types.ObjectId;
-    steps: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
+    contactId: mongoose.Types.ObjectId;
+    author?: {
+        _id: mongoose.Types.ObjectId;
         name: string;
-        color: {
-            name: string;
-            hex: string;
-        };
-    }>;
+    } | undefined;
 }>>;
-export { FunnelSalesSchema, FunnelSales, FunnelSalesSchemaType };

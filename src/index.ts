@@ -73,6 +73,8 @@ export { Coupon, CouponSchema, CouponSchemaType } from "./models/coupon";
 
 export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
 
+export { ContactAnnotation, ContactAnnotationSchema, ContactAnnotationSchemaType } from './models/contactAnnotation'
+
 export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 
 export {

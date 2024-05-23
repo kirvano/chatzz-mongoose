@@ -44,6 +44,7 @@ export { FunnelSales, FunnelSalesSchema, FunnelSalesSchemaType, } from "./models
 export { FlowEvent, FlowEventsSchemaType } from "./models/FlowEvent";
 export { Coupon, CouponSchema, CouponSchemaType } from "./models/coupon";
 export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
+export { ContactAnnotation, ContactAnnotationSchema, ContactAnnotationSchemaType } from './models/contactAnnotation';
 export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 export { BusinessGroup, BusinessGroupSchema, BusinessGroupSchemaType, } from "./models/businessGroup";
 export { AwaitingResponse, AwaitingResponseSchemaType, } from "./models/AwaitingResponse";
