@@ -43,6 +43,8 @@ export {
   MacroGroupSchemaType,
 } from "./models/macroGroup";
 
+export { LeadHistory, LeadHistorySchema, LeadHistorySchemaType } from './models/leadHistory'
+
 export { Logs, LogsSchemaType } from "./models/logs";
 
 export { LiveChat, ChatSchemaType } from "./models/livechat";
