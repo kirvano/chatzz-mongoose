@@ -29,6 +29,7 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -36,7 +37,6 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     }[];
     name: string;
     plan: mongoose.Types.ObjectId;
-    active: boolean;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -63,6 +63,7 @@ declare const Platform: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -70,7 +71,6 @@ declare const Platform: mongoose.Model<{
     }[];
     name: string;
     plan: mongoose.Types.ObjectId;
-    active: boolean;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -97,6 +97,7 @@ declare const Platform: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -104,7 +105,6 @@ declare const Platform: mongoose.Model<{
     }[];
     name: string;
     plan: mongoose.Types.ObjectId;
-    active: boolean;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;

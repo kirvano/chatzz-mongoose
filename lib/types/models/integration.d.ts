@@ -30,6 +30,7 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     updatedAt: NativeDate;
 } & {
     type: "webhooks";
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -38,7 +39,6 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
-    active: boolean;
     workspaceId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -71,6 +71,7 @@ declare const Integration: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "webhooks";
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -79,7 +80,6 @@ declare const Integration: mongoose.Model<{
         customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
-    active: boolean;
     workspaceId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
@@ -112,6 +112,7 @@ declare const Integration: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "webhooks";
+    active: boolean;
     fields: {
         name: string;
         key: string;
@@ -120,7 +121,6 @@ declare const Integration: mongoose.Model<{
         customField?: mongoose.Types.ObjectId | undefined;
     }[];
     name: string;
-    active: boolean;
     workspaceId: mongoose.Types.ObjectId;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;

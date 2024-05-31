@@ -105,3 +105,9 @@ export {
   PlatformLogsSchema,
   PlatformLogsSchemaType,
 } from "./models/platformsLogs";
+
+export {
+  Resource,
+  ResourceSchema,
+  ResourceSchemaType,
+} from "./models/resource";

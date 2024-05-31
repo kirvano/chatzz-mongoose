@@ -30,8 +30,8 @@ declare const CouponSchema: mongoose.Schema<any, mongoose.Model<any, any, any, a
     updatedAt: NativeDate;
 } & {
     type: "value" | "percentage";
-    code: string;
     active: boolean;
+    code: string;
     value: number;
     usesQuantity: number;
     validMonths: number;
@@ -50,8 +50,8 @@ declare const Coupon: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "value" | "percentage";
-    code: string;
     active: boolean;
+    code: string;
     value: number;
     usesQuantity: number;
     validMonths: number;
@@ -70,8 +70,8 @@ declare const Coupon: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "value" | "percentage";
-    code: string;
     active: boolean;
+    code: string;
     value: number;
     usesQuantity: number;
     validMonths: number;

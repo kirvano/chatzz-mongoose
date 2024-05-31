@@ -30,7 +30,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     updatedAt: NativeDate;
 } & {
     userId: mongoose.Types.ObjectId;
-    status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
     customFields: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -182,6 +182,18 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         startHour?: Date | undefined;
         endHour?: Date | undefined;
     }>;
+    resources: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        active: boolean;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
+        quantity?: number | undefined;
+        paymentMethod?: string | undefined;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
+    }>;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     plan?: ({
@@ -212,11 +224,11 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
             planId?: mongoose.Types.ObjectId | undefined;
             dateToUpdate?: Date | undefined;
         }>;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
         planId?: mongoose.Types.ObjectId | undefined;
         paymentMethodId?: string | undefined;
         subscribedAt?: Date | undefined;
-        lastChargeDate?: Date | undefined;
-        nextChargeDate?: Date | undefined;
     }) | undefined;
     inputFlow?: ({
         createdAt: NativeDate;
@@ -268,7 +280,7 @@ export declare const Workspace: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     userId: mongoose.Types.ObjectId;
-    status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
     customFields: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -420,6 +432,18 @@ export declare const Workspace: mongoose.Model<{
         startHour?: Date | undefined;
         endHour?: Date | undefined;
     }>;
+    resources: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        active: boolean;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
+        quantity?: number | undefined;
+        paymentMethod?: string | undefined;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
+    }>;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     plan?: ({
@@ -450,11 +474,11 @@ export declare const Workspace: mongoose.Model<{
             planId?: mongoose.Types.ObjectId | undefined;
             dateToUpdate?: Date | undefined;
         }>;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
         planId?: mongoose.Types.ObjectId | undefined;
         paymentMethodId?: string | undefined;
         subscribedAt?: Date | undefined;
-        lastChargeDate?: Date | undefined;
-        nextChargeDate?: Date | undefined;
     }) | undefined;
     inputFlow?: ({
         createdAt: NativeDate;
@@ -506,7 +530,7 @@ export declare const Workspace: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     userId: mongoose.Types.ObjectId;
-    status: "canceled" | "active" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
+    status: "active" | "canceled" | "inactive" | "requires_plan" | "awaiting_payment" | "in_cancellation" | "free_trial" | "expired" | "blocked";
     customFields: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -658,6 +682,18 @@ export declare const Workspace: mongoose.Model<{
         startHour?: Date | undefined;
         endHour?: Date | undefined;
     }>;
+    resources: mongoose.Types.DocumentArray<{
+        createdAt: NativeDate;
+        updatedAt: NativeDate;
+    } & {
+        active: boolean;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
+        quantity?: number | undefined;
+        paymentMethod?: string | undefined;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
+    }>;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     plan?: ({
@@ -688,11 +724,11 @@ export declare const Workspace: mongoose.Model<{
             planId?: mongoose.Types.ObjectId | undefined;
             dateToUpdate?: Date | undefined;
         }>;
+        lastChargeDate?: Date | undefined;
+        nextChargeDate?: Date | undefined;
         planId?: mongoose.Types.ObjectId | undefined;
         paymentMethodId?: string | undefined;
         subscribedAt?: Date | undefined;
-        lastChargeDate?: Date | undefined;
-        nextChargeDate?: Date | undefined;
     }) | undefined;
     inputFlow?: ({
         createdAt: NativeDate;
