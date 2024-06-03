@@ -68,6 +68,10 @@ const ContactSchema = new mongoose.Schema(
       },
     ],
     funnelStep: { type: mongoose.Schema.Types.ObjectId },
+    actions: [{
+      _id: { type: mongoose.Schema.Types.ObjectId, required: true },
+      isCompleted: { type: Boolean, default: false, required: true },
+    }],
   },
   { timestamps: true }
 );

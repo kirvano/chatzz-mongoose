@@ -27,6 +27,7 @@ export { default as mongoose } from "mongoose";
 export { Workspace, WorkspaceSchemaType } from "./models/workspace";
 export { WorkspaceConfig, WorkspaceConfigSchemaType, } from "./models/workspaceConfig";
 export { User, UserSchemaType } from "./models/user";
+export { ContactAction, ContactActionSchemaType, ContactActionSchema } from './models/contactAction';
 export { TransmissionControl, TransmissionControlSchema, TransmissionControlSchemaType, } from "./models/transmissionControl";
 export { Transmission } from "./models/transmission";
 export { AnswerSchema, QuestionSchema, Questionnaire, QuestionnaireSchema, QuestionnaireSchemaType, } from "./models/questionnaire";

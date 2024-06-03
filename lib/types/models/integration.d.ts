@@ -40,6 +40,7 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     name: string;
     active: boolean;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -51,7 +52,6 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     reprocessStatus: "executing" | "stopped" | "stopping";
@@ -81,6 +81,7 @@ declare const Integration: mongoose.Model<{
     name: string;
     active: boolean;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -92,7 +93,6 @@ declare const Integration: mongoose.Model<{
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     reprocessStatus: "executing" | "stopped" | "stopping";
@@ -122,6 +122,7 @@ declare const Integration: mongoose.Model<{
     name: string;
     active: boolean;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -133,7 +134,6 @@ declare const Integration: mongoose.Model<{
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     reprocessStatus: "executing" | "stopped" | "stopping";

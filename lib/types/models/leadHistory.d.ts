@@ -31,7 +31,7 @@ export declare const LeadHistorySchema: mongoose.Schema<any, mongoose.Model<any,
 } & {
     contactId: mongoose.Types.ObjectId;
     action?: {
-        enum: unknown[] | unknown[] | unknown[];
+        enum: unknown[] | unknown[] | unknown[] | unknown[];
         type?: string | undefined;
         required?: unknown;
     } | undefined;
@@ -47,7 +47,7 @@ export declare const LeadHistory: mongoose.Model<{
 } & {
     contactId: mongoose.Types.ObjectId;
     action?: {
-        enum: unknown[] | unknown[] | unknown[];
+        enum: unknown[] | unknown[] | unknown[] | unknown[];
         type?: string | undefined;
         required?: unknown;
     } | undefined;
@@ -63,7 +63,7 @@ export declare const LeadHistory: mongoose.Model<{
 } & {
     contactId: mongoose.Types.ObjectId;
     action?: {
-        enum: unknown[] | unknown[] | unknown[];
+        enum: unknown[] | unknown[] | unknown[] | unknown[];
         type?: string | undefined;
         required?: unknown;
     } | undefined;

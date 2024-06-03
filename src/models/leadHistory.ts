@@ -6,7 +6,7 @@ export const LeadHistorySchema = new mongoose.Schema(
     action: {
       type: {
         type: String,
-        enum: ["status_update", "attendant_update", "action_update"],
+        enum: ["status_update", "attendant_update", "contact_action_update", 'crm_update'],
         required: true,
       },
       data: {

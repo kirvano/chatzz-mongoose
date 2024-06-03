@@ -9,6 +9,7 @@ export {
 
 export { User, UserSchemaType } from "./models/user";
 
+export { ContactAction, ContactActionSchemaType, ContactActionSchema } from './models/contactAction'
 export {
   TransmissionControl,
   TransmissionControlSchema,
