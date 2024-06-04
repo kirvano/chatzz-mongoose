@@ -32,9 +32,9 @@ declare const MacroSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     name: string;
     content: any;
     workspaceId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
     groupId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";
         users: mongoose.Types.ObjectId[];
@@ -48,9 +48,9 @@ declare const Macro: mongoose.Model<{
     name: string;
     content: any;
     workspaceId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
     groupId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";
         users: mongoose.Types.ObjectId[];
@@ -64,9 +64,9 @@ declare const Macro: mongoose.Model<{
     name: string;
     content: any;
     workspaceId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
     groupId: mongoose.Types.ObjectId;
     category: "text" | "document" | "image" | "video" | "audio" | "script";
-    author: mongoose.Types.ObjectId;
     availability?: {
         condition: "public" | "private";
         users: mongoose.Types.ObjectId[];

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { LeadHistory } from "./leadHistory";
 
 const AssignmentHistoryChatSchema = new mongoose.Schema({
   attendantUserId: {

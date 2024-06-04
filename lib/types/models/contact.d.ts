@@ -40,6 +40,10 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     campaigns: {
         _id?: string | undefined;
     }[];
+    actions: {
+        _id: mongoose.Types.ObjectId;
+        isCompleted: boolean;
+    }[];
     leadValue: number;
     leadOrigin: string;
     name?: string | undefined;
@@ -70,6 +74,10 @@ declare const Contact: mongoose.Model<{
     campaigns: {
         _id?: string | undefined;
     }[];
+    actions: {
+        _id: mongoose.Types.ObjectId;
+        isCompleted: boolean;
+    }[];
     leadValue: number;
     leadOrigin: string;
     name?: string | undefined;
@@ -99,6 +107,10 @@ declare const Contact: mongoose.Model<{
     jid: string;
     campaigns: {
         _id?: string | undefined;
+    }[];
+    actions: {
+        _id: mongoose.Types.ObjectId;
+        isCompleted: boolean;
     }[];
     leadValue: number;
     leadOrigin: string;

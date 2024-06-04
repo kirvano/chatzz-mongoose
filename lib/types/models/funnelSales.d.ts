@@ -38,6 +38,10 @@ declare const FunnelSalesSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         updatedAt: NativeDate;
     } & {
         name: string;
+        color: {
+            name: string;
+            hex: string;
+        };
     }>;
 }>;
 type FunnelSalesSchemaType = mongoose.InferSchemaType<typeof FunnelSalesSchema>;
@@ -54,6 +58,10 @@ declare const FunnelSales: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         name: string;
+        color: {
+            name: string;
+            hex: string;
+        };
     }>;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
@@ -70,6 +78,10 @@ declare const FunnelSales: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         name: string;
+        color: {
+            name: string;
+            hex: string;
+        };
     }>;
 }>>;
 export { FunnelSalesSchema, FunnelSales, FunnelSalesSchemaType };
