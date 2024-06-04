@@ -20,6 +20,8 @@ const IntegrationLogsSchema = new mongoose.Schema(
     message: { type: String, required: true },
     code: { type: String, default: "" },
     payload: { type: String, default: "" },
+    sentPayload: { type: String, default: "" },
+    statusCode: { type: Number, default: 0 },
     type: {
       type: String,
       enum: ["error", "info", "warning", "reprocessed"],

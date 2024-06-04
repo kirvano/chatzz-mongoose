@@ -32,6 +32,14 @@ const ReprocessConfigSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+const IntegrationBodySchema = new mongoose.Schema({
+  identification: { type: String, required: true },
+  name: { type: String, required: true },
+  payloadFieldName: { type: String, required: true },
+  isCustomField: { type: Boolean, default: false },
+  optional: { type: Boolean, default: true },
+});
+
 const IntegrationSchema = new mongoose.Schema(
   {
     workspaceId: { type: mongoose.Schema.Types.ObjectId, required: true },
@@ -40,7 +48,10 @@ const IntegrationSchema = new mongoose.Schema(
     executions: { type: Number, default: 0 },
     direction: { type: String, required: true, enum: ["input", "output"] },
     type: { type: String, enum: ["webhooks"], required: true },
+    headers: { type: mongoose.Schema.Types.Mixed },
+    body: [IntegrationBodySchema],
     reprocessConfigs: ReprocessConfigSchema,
+    externalURL: { type: String },
     reprocessStatus: {
       type: String,
       enum: ["executing", "stopped", "stopping"],
