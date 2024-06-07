@@ -111,3 +111,9 @@ export {
   ResourceSchema,
   ResourceSchemaType,
 } from "./models/resource";
+
+export {
+  ResourceLogs,
+  ResourceLogsSchema,
+  ResourceLogsSchemaType,
+} from "./models/resourceLogs";

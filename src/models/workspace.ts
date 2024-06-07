@@ -1,5 +1,15 @@
 import mongoose from "mongoose";
 
+const ResourcePaymentSchema = new mongoose.Schema(
+  {
+    paymentIntention: { type: String },
+    paymentMethod: { type: String },
+    price: { type: Number },
+    active: { type: Boolean, default: true },
+  },
+  { timestamps: true }
+);
+
 const WorkspaceResourceSchema = new mongoose.Schema(
   {
     resourceId: { type: mongoose.Schema.Types.ObjectId },
@@ -12,6 +22,7 @@ const WorkspaceResourceSchema = new mongoose.Schema(
     paymentMethod: { type: String },
     lastChargeDate: { type: Date },
     nextChargeDate: { type: Date },
+    payments: [ResourcePaymentSchema],
   },
   { timestamps: true }
 );

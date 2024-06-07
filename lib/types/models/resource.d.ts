@@ -30,21 +30,22 @@ declare const ResourceSchema: mongoose.Schema<any, mongoose.Model<any, any, any,
     updatedAt: NativeDate;
 } & {
     type: "attendant" | "whatsapp" | "webhook" | "transmission";
-    quantity: number;
-    active: boolean;
-    name: string;
     price: number;
+    active: boolean;
+    quantity: number;
+    name: string;
     icon: string;
     resourceType: "recharge" | "subscription";
     chargeType: "internal" | "external";
+    externalURL?: string | undefined;
     mapping?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
         fields: mongoose.Types.DocumentArray<{
             name?: string | undefined;
-            value?: string | undefined;
             identification?: string | undefined;
+            value?: string | undefined;
         }>;
         events: mongoose.Types.DocumentArray<{
             id?: string | undefined;
@@ -54,7 +55,6 @@ declare const ResourceSchema: mongoose.Schema<any, mongoose.Model<any, any, any,
         }>;
         receivedData?: string | undefined;
     }) | undefined;
-    externalURL?: string | undefined;
     frequency?: number | undefined;
 }>;
 type ResourceSchemaType = mongoose.InferSchemaType<typeof ResourceSchema>;
@@ -63,21 +63,22 @@ declare const Resource: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "attendant" | "whatsapp" | "webhook" | "transmission";
-    quantity: number;
-    active: boolean;
-    name: string;
     price: number;
+    active: boolean;
+    quantity: number;
+    name: string;
     icon: string;
     resourceType: "recharge" | "subscription";
     chargeType: "internal" | "external";
+    externalURL?: string | undefined;
     mapping?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
         fields: mongoose.Types.DocumentArray<{
             name?: string | undefined;
-            value?: string | undefined;
             identification?: string | undefined;
+            value?: string | undefined;
         }>;
         events: mongoose.Types.DocumentArray<{
             id?: string | undefined;
@@ -87,7 +88,6 @@ declare const Resource: mongoose.Model<{
         }>;
         receivedData?: string | undefined;
     }) | undefined;
-    externalURL?: string | undefined;
     frequency?: number | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
@@ -96,21 +96,22 @@ declare const Resource: mongoose.Model<{
     updatedAt: NativeDate;
 } & {
     type: "attendant" | "whatsapp" | "webhook" | "transmission";
-    quantity: number;
-    active: boolean;
-    name: string;
     price: number;
+    active: boolean;
+    quantity: number;
+    name: string;
     icon: string;
     resourceType: "recharge" | "subscription";
     chargeType: "internal" | "external";
+    externalURL?: string | undefined;
     mapping?: ({
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
         fields: mongoose.Types.DocumentArray<{
             name?: string | undefined;
-            value?: string | undefined;
             identification?: string | undefined;
+            value?: string | undefined;
         }>;
         events: mongoose.Types.DocumentArray<{
             id?: string | undefined;
@@ -120,7 +121,6 @@ declare const Resource: mongoose.Model<{
         }>;
         receivedData?: string | undefined;
     }) | undefined;
-    externalURL?: string | undefined;
     frequency?: number | undefined;
 }>>;
 export { ResourceSchema, ResourceSchemaType, Resource };

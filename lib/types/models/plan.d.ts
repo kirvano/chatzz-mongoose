@@ -42,9 +42,9 @@ declare const PlanSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     transmissionAccess: boolean;
     webhooksAccess: boolean;
     funnelSalesAccess: boolean;
+    price?: number | undefined;
     name?: string | undefined;
     description?: string | undefined;
-    price?: number | undefined;
     checkoutURL?: string | undefined;
     chargeFrequency?: number | undefined;
     attendants?: number | undefined;
@@ -69,9 +69,9 @@ export declare const Plan: mongoose.Model<{
     transmissionAccess: boolean;
     webhooksAccess: boolean;
     funnelSalesAccess: boolean;
+    price?: number | undefined;
     name?: string | undefined;
     description?: string | undefined;
-    price?: number | undefined;
     checkoutURL?: string | undefined;
     chargeFrequency?: number | undefined;
     attendants?: number | undefined;
@@ -96,9 +96,9 @@ export declare const Plan: mongoose.Model<{
     transmissionAccess: boolean;
     webhooksAccess: boolean;
     funnelSalesAccess: boolean;
+    price?: number | undefined;
     name?: string | undefined;
     description?: string | undefined;
-    price?: number | undefined;
     checkoutURL?: string | undefined;
     chargeFrequency?: number | undefined;
     attendants?: number | undefined;

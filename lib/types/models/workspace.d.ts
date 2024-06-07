@@ -187,10 +187,19 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         updatedAt: NativeDate;
     } & {
         active: boolean;
-        resourceId?: mongoose.Types.ObjectId | undefined;
+        payments: mongoose.Types.DocumentArray<{
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            active: boolean;
+            paymentIntention?: string | undefined;
+            paymentMethod?: string | undefined;
+            price?: number | undefined;
+        }>;
         type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
-        quantity?: number | undefined;
         paymentMethod?: string | undefined;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        quantity?: number | undefined;
         lastChargeDate?: Date | undefined;
         nextChargeDate?: Date | undefined;
     }>;
@@ -437,10 +446,19 @@ export declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         active: boolean;
-        resourceId?: mongoose.Types.ObjectId | undefined;
+        payments: mongoose.Types.DocumentArray<{
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            active: boolean;
+            paymentIntention?: string | undefined;
+            paymentMethod?: string | undefined;
+            price?: number | undefined;
+        }>;
         type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
-        quantity?: number | undefined;
         paymentMethod?: string | undefined;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        quantity?: number | undefined;
         lastChargeDate?: Date | undefined;
         nextChargeDate?: Date | undefined;
     }>;
@@ -687,10 +705,19 @@ export declare const Workspace: mongoose.Model<{
         updatedAt: NativeDate;
     } & {
         active: boolean;
-        resourceId?: mongoose.Types.ObjectId | undefined;
+        payments: mongoose.Types.DocumentArray<{
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+        } & {
+            active: boolean;
+            paymentIntention?: string | undefined;
+            paymentMethod?: string | undefined;
+            price?: number | undefined;
+        }>;
         type?: "attendant" | "whatsapp" | "webhook" | "transmission" | undefined;
-        quantity?: number | undefined;
         paymentMethod?: string | undefined;
+        resourceId?: mongoose.Types.ObjectId | undefined;
+        quantity?: number | undefined;
         lastChargeDate?: Date | undefined;
         nextChargeDate?: Date | undefined;
     }>;
