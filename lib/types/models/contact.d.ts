@@ -57,6 +57,7 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
         pausedTill: Date;
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
+    funnelStepDate?: Date | undefined;
 }>;
 type ContactSchemaType = mongoose.InferSchemaType<typeof ContactSchema>;
 declare const Contact: mongoose.Model<{
@@ -91,6 +92,7 @@ declare const Contact: mongoose.Model<{
         pausedTill: Date;
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
+    funnelStepDate?: Date | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -125,5 +127,6 @@ declare const Contact: mongoose.Model<{
         pausedTill: Date;
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
+    funnelStepDate?: Date | undefined;
 }>>;
 export { ContactSchema, Contact, ContactSchemaType };
