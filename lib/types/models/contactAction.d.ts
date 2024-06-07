@@ -23,47 +23,52 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
-declare const FlowLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+export declare const ContactActionSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    message: string;
-    code?: string | undefined;
-    flowId?: mongoose.Types.ObjectId | undefined;
-    jid?: string | undefined;
-    workspaceId?: mongoose.Types.ObjectId | undefined;
-    stepId?: mongoose.Types.ObjectId | undefined;
-    payload?: string | undefined;
-    stack?: string | undefined;
+    workspaceId: mongoose.Types.ObjectId;
+    isDefault: boolean;
+    stepId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
+    action?: {
+        description: string;
+        title: string;
+        icon: string;
+        day: number;
+    } | undefined;
 }>;
-type FlowLogsSchemaType = mongoose.InferSchemaType<typeof FlowLogsSchema>;
-declare const FlowLogs: mongoose.Model<{
+export type ContactActionSchemaType = mongoose.InferSchemaType<typeof ContactActionSchema>;
+export declare const ContactAction: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    message: string;
-    code?: string | undefined;
-    flowId?: mongoose.Types.ObjectId | undefined;
-    jid?: string | undefined;
-    workspaceId?: mongoose.Types.ObjectId | undefined;
-    stepId?: mongoose.Types.ObjectId | undefined;
-    payload?: string | undefined;
-    stack?: string | undefined;
+    workspaceId: mongoose.Types.ObjectId;
+    isDefault: boolean;
+    stepId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
+    action?: {
+        description: string;
+        title: string;
+        icon: string;
+        day: number;
+    } | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    message: string;
-    code?: string | undefined;
-    flowId?: mongoose.Types.ObjectId | undefined;
-    jid?: string | undefined;
-    workspaceId?: mongoose.Types.ObjectId | undefined;
-    stepId?: mongoose.Types.ObjectId | undefined;
-    payload?: string | undefined;
-    stack?: string | undefined;
+    workspaceId: mongoose.Types.ObjectId;
+    isDefault: boolean;
+    stepId: mongoose.Types.ObjectId;
+    author: mongoose.Types.ObjectId;
+    action?: {
+        description: string;
+        title: string;
+        icon: string;
+        day: number;
+    } | undefined;
 }>>;
-export { FlowLogsSchema, FlowLogs, FlowLogsSchemaType };

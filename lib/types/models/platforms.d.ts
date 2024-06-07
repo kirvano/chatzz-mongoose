@@ -37,6 +37,7 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     name: string;
     plan: mongoose.Types.ObjectId;
     active: boolean;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -45,7 +46,6 @@ declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any
         action: "blocked" | "active_status";
         identification: string;
     }>;
-    icon: string;
     executions: number;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
@@ -71,6 +71,7 @@ declare const Platform: mongoose.Model<{
     name: string;
     plan: mongoose.Types.ObjectId;
     active: boolean;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -79,7 +80,6 @@ declare const Platform: mongoose.Model<{
         action: "blocked" | "active_status";
         identification: string;
     }>;
-    icon: string;
     executions: number;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
@@ -105,6 +105,7 @@ declare const Platform: mongoose.Model<{
     name: string;
     plan: mongoose.Types.ObjectId;
     active: boolean;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -113,7 +114,6 @@ declare const Platform: mongoose.Model<{
         action: "blocked" | "active_status";
         identification: string;
     }>;
-    icon: string;
     executions: number;
     reprocessStatus: "executing" | "stopped" | "stopping";
     reprocessConfigs?: ({
