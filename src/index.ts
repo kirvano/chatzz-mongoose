@@ -9,6 +9,7 @@ export {
 
 export { User, UserSchemaType } from "./models/user";
 
+export { ContactAction, ContactActionSchemaType, ContactActionSchema } from './models/contactAction'
 export {
   TransmissionControl,
   TransmissionControlSchema,
@@ -43,6 +44,8 @@ export {
   MacroGroupSchemaType,
 } from "./models/macroGroup";
 
+export { LeadHistory, LeadHistorySchema, LeadHistorySchemaType } from './models/leadHistory'
+
 export { Logs, LogsSchemaType } from "./models/logs";
 
 export { LiveChat, ChatSchemaType } from "./models/livechat";
@@ -72,6 +75,8 @@ export { FlowEvent, FlowEventsSchemaType } from "./models/FlowEvent";
 export { Coupon, CouponSchema, CouponSchemaType } from "./models/coupon";
 
 export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
+
+export { ContactAnnotation, ContactAnnotationSchema, ContactAnnotationSchemaType } from './models/contactAnnotation'
 
 export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 

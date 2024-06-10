@@ -23,107 +23,146 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
-declare const PlatformsSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+declare const PlatformsSchema: mongoose.Schema<
+  any,
+  mongoose.Model<any, any, any, any, any>,
+  {},
+  {},
+  {},
+  {},
+  mongoose.ResolveSchemaOptions<{
     timestamps: true;
-}>, {
+  }>,
+  {
     createdAt: NativeDate;
     updatedAt: NativeDate;
-} & {
+  } & {
     active: boolean;
     fields: {
-        name: string;
-        key: string;
-        value: string;
+      name: string;
+      key: string;
+      value: string;
     }[];
     name: string;
     plan: mongoose.Types.ObjectId;
-    events: mongoose.Types.DocumentArray<{
+    active: boolean;
+    icon: string;
+    events: mongoose.Types.DocumentArray<
+      {
         createdAt: NativeDate;
         updatedAt: NativeDate;
-    } & {
+      } & {
         name: string;
         action: "blocked" | "active_status";
         identification: string;
-    }>;
-    icon: string;
+      }
+    >;
     executions: number;
     reprocessStatus: "executing" | "stopped" | "stopping";
-    reprocessConfigs?: ({
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        delay: number;
-        order: string;
-        interval: number;
-        allowedCodes: string[];
-    }) | undefined;
-}>;
+    reprocessConfigs?:
+      | ({
+          createdAt: NativeDate;
+          updatedAt: NativeDate;
+        } & {
+          delay: number;
+          order: string;
+          interval: number;
+          allowedCodes: string[];
+        })
+      | undefined;
+  }
+>;
 type PlatformsSchemaType = mongoose.InferSchemaType<typeof PlatformsSchema>;
-declare const Platform: mongoose.Model<{
+declare const Platform: mongoose.Model<
+  {
     createdAt: NativeDate;
     updatedAt: NativeDate;
-} & {
+  } & {
     active: boolean;
     fields: {
-        name: string;
-        key: string;
-        value: string;
+      name: string;
+      key: string;
+      value: string;
     }[];
     name: string;
     plan: mongoose.Types.ObjectId;
-    events: mongoose.Types.DocumentArray<{
+    active: boolean;
+    icon: string;
+    events: mongoose.Types.DocumentArray<
+      {
         createdAt: NativeDate;
         updatedAt: NativeDate;
-    } & {
+      } & {
         name: string;
         action: "blocked" | "active_status";
         identification: string;
-    }>;
-    icon: string;
+      }
+    >;
     executions: number;
     reprocessStatus: "executing" | "stopped" | "stopping";
-    reprocessConfigs?: ({
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
+    reprocessConfigs?:
+      | ({
+          createdAt: NativeDate;
+          updatedAt: NativeDate;
+        } & {
+          delay: number;
+          order: string;
+          interval: number;
+          allowedCodes: string[];
+        })
+      | undefined;
+  },
+  {},
+  {},
+  {},
+  mongoose.Schema<
+    any,
+    mongoose.Model<any, any, any, any, any>,
+    {},
+    {},
+    {},
+    {},
+    mongoose.ResolveSchemaOptions<{
+      timestamps: true;
+    }>,
+    {
+      createdAt: NativeDate;
+      updatedAt: NativeDate;
     } & {
-        delay: number;
-        order: string;
-        interval: number;
-        allowedCodes: string[];
-    }) | undefined;
-}, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
-    timestamps: true;
-}>, {
-    createdAt: NativeDate;
-    updatedAt: NativeDate;
-} & {
-    active: boolean;
-    fields: {
+      active: boolean;
+      fields: {
         name: string;
         key: string;
         value: string;
-    }[];
-    name: string;
-    plan: mongoose.Types.ObjectId;
-    events: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        name: string;
-        action: "blocked" | "active_status";
-        identification: string;
-    }>;
-    icon: string;
-    executions: number;
-    reprocessStatus: "executing" | "stopped" | "stopping";
-    reprocessConfigs?: ({
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        delay: number;
-        order: string;
-        interval: number;
-        allowedCodes: string[];
-    }) | undefined;
-}>>;
+      }[];
+      name: string;
+      plan: mongoose.Types.ObjectId;
+      active: boolean;
+      icon: string;
+      events: mongoose.Types.DocumentArray<
+        {
+          createdAt: NativeDate;
+          updatedAt: NativeDate;
+        } & {
+          name: string;
+          action: "blocked" | "active_status";
+          identification: string;
+        }
+      >;
+      executions: number;
+      reprocessStatus: "executing" | "stopped" | "stopping";
+      reprocessConfigs?:
+        | ({
+            createdAt: NativeDate;
+            updatedAt: NativeDate;
+          } & {
+            delay: number;
+            order: string;
+            interval: number;
+            allowedCodes: string[];
+          })
+        | undefined;
+    }
+  >
+>;
 export { PlatformsSchema, Platform, PlatformsSchemaType };

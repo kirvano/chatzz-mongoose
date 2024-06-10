@@ -40,6 +40,7 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     }[];
     name: string;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -51,7 +52,6 @@ declare const IntegrationSchema: mongoose.Schema<any, mongoose.Model<any, any, a
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     body: mongoose.Types.DocumentArray<{
@@ -90,6 +90,7 @@ declare const Integration: mongoose.Model<{
     }[];
     name: string;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -101,7 +102,6 @@ declare const Integration: mongoose.Model<{
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     body: mongoose.Types.DocumentArray<{
@@ -140,6 +140,7 @@ declare const Integration: mongoose.Model<{
     }[];
     name: string;
     workspaceId: mongoose.Types.ObjectId;
+    icon: string;
     events: mongoose.Types.DocumentArray<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
@@ -151,7 +152,6 @@ declare const Integration: mongoose.Model<{
             data?: any;
         }>;
     }>;
-    icon: string;
     executions: number;
     direction: "input" | "output";
     body: mongoose.Types.DocumentArray<{
