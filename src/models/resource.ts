@@ -26,7 +26,7 @@ const ResourceSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     icon: { type: String, required: true },
-    active: { type: Boolean, default: false },
+    active: { type: Boolean, default: true },
     type: {
       type: String,
       required: true,
