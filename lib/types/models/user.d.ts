@@ -29,9 +29,9 @@ declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     role: "admin" | "user" | "superadmin";
     phoneNumber: string;
-    active: boolean;
     blocked: boolean;
     wallet: {
         paymentMethod: string;
@@ -70,9 +70,9 @@ export declare const User: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     role: "admin" | "user" | "superadmin";
     phoneNumber: string;
-    active: boolean;
     blocked: boolean;
     wallet: {
         paymentMethod: string;
@@ -111,9 +111,9 @@ export declare const User: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    active: boolean;
     role: "admin" | "user" | "superadmin";
     phoneNumber: string;
-    active: boolean;
     blocked: boolean;
     wallet: {
         paymentMethod: string;
