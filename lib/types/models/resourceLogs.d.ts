@@ -23,65 +23,38 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
-declare const CouponSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
+declare const ResourceLogsSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "value" | "percentage";
-    active: boolean;
+    type: "error" | "info" | "reprocessed";
+    resourceId: mongoose.Types.ObjectId;
+    message: string;
     code: string;
-    value: number;
-    usesQuantity: number;
-    validMonths: number;
-    allowedPlans: mongoose.Types.ObjectId[];
-    uses: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        chargeId: string;
-    }>;
-    expiration?: Date | undefined;
+    payload: string;
 }>;
-type CouponSchemaType = mongoose.InferSchemaType<typeof CouponSchema>;
-declare const Coupon: mongoose.Model<{
+type ResourceLogsSchemaType = mongoose.InferSchemaType<typeof ResourceLogsSchema>;
+declare const ResourceLogs: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "value" | "percentage";
-    active: boolean;
+    type: "error" | "info" | "reprocessed";
+    resourceId: mongoose.Types.ObjectId;
+    message: string;
     code: string;
-    value: number;
-    usesQuantity: number;
-    validMonths: number;
-    allowedPlans: mongoose.Types.ObjectId[];
-    uses: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        chargeId: string;
-    }>;
-    expiration?: Date | undefined;
+    payload: string;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
-    type: "value" | "percentage";
-    active: boolean;
+    type: "error" | "info" | "reprocessed";
+    resourceId: mongoose.Types.ObjectId;
+    message: string;
     code: string;
-    value: number;
-    usesQuantity: number;
-    validMonths: number;
-    allowedPlans: mongoose.Types.ObjectId[];
-    uses: mongoose.Types.DocumentArray<{
-        createdAt: NativeDate;
-        updatedAt: NativeDate;
-    } & {
-        chargeId: string;
-    }>;
-    expiration?: Date | undefined;
+    payload: string;
 }>>;
-export { CouponSchema, Coupon, CouponSchemaType };
+export { ResourceLogsSchema, ResourceLogs, ResourceLogsSchemaType };

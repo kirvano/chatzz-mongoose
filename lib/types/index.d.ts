@@ -54,3 +54,5 @@ export { FlowLogs, FlowLogsSchema, FlowLogsSchemaType, } from "./models/flowLogs
 export { LabelConfigs, LabelConfigsSchemaType } from "./models/labelConfigs";
 export { Platform, PlatformsSchema, PlatformsSchemaType, } from "./models/platforms";
 export { PlatformLogs, PlatformLogsSchema, PlatformLogsSchemaType, } from "./models/platformsLogs";
+export { Resource, ResourceSchema, ResourceSchemaType, } from "./models/resource";
+export { ResourceLogs, ResourceLogsSchema, ResourceLogsSchemaType, } from "./models/resourceLogs";
