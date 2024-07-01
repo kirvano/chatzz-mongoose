@@ -46,6 +46,8 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     }[];
     leadValue: number;
     leadOrigin: string;
+    onWhatsapp: boolean;
+    verified: boolean;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
@@ -58,6 +60,7 @@ declare const ContactSchema: mongoose.Schema<any, mongoose.Model<any, any, any, 
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
     funnelStepDate?: Date | undefined;
+    verifiedAt?: Date | undefined;
 }>;
 type ContactSchemaType = mongoose.InferSchemaType<typeof ContactSchema>;
 declare const Contact: mongoose.Model<{
@@ -81,6 +84,8 @@ declare const Contact: mongoose.Model<{
     }[];
     leadValue: number;
     leadOrigin: string;
+    onWhatsapp: boolean;
+    verified: boolean;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
@@ -93,6 +98,7 @@ declare const Contact: mongoose.Model<{
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
     funnelStepDate?: Date | undefined;
+    verifiedAt?: Date | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -116,6 +122,8 @@ declare const Contact: mongoose.Model<{
     }[];
     leadValue: number;
     leadOrigin: string;
+    onWhatsapp: boolean;
+    verified: boolean;
     name?: string | undefined;
     phoneNumber?: string | undefined;
     email?: string | undefined;
@@ -128,5 +136,6 @@ declare const Contact: mongoose.Model<{
     } | undefined;
     funnelStep?: mongoose.Types.ObjectId | undefined;
     funnelStepDate?: Date | undefined;
+    verifiedAt?: Date | undefined;
 }>>;
 export { ContactSchema, Contact, ContactSchemaType };
