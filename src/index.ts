@@ -9,7 +9,11 @@ export {
 
 export { User, UserSchemaType } from "./models/user";
 
-export { ContactAction, ContactActionSchemaType, ContactActionSchema } from './models/contactAction'
+export {
+  ContactAction,
+  ContactActionSchemaType,
+  ContactActionSchema,
+} from "./models/contactAction";
 export {
   TransmissionControl,
   TransmissionControlSchema,
@@ -44,7 +48,11 @@ export {
   MacroGroupSchemaType,
 } from "./models/macroGroup";
 
-export { LeadHistory, LeadHistorySchema, LeadHistorySchemaType } from './models/leadHistory'
+export {
+  LeadHistory,
+  LeadHistorySchema,
+  LeadHistorySchemaType,
+} from "./models/leadHistory";
 
 export { Logs, LogsSchemaType } from "./models/logs";
 
@@ -76,7 +84,11 @@ export { Coupon, CouponSchema, CouponSchemaType } from "./models/coupon";
 
 export { Contact, ContactSchema, ContactSchemaType } from "./models/contact";
 
-export { ContactAnnotation, ContactAnnotationSchema, ContactAnnotationSchemaType } from './models/contactAnnotation'
+export {
+  ContactAnnotation,
+  ContactAnnotationSchema,
+  ContactAnnotationSchemaType,
+} from "./models/contactAnnotation";
 
 export { ChatMessage, MessageSchemaType } from "./models/chatmessage";
 
@@ -122,3 +134,9 @@ export {
   ResourceLogsSchema,
   ResourceLogsSchemaType,
 } from "./models/resourceLogs";
+
+export {
+  ContactImportSchemaType,
+  ContactsImport,
+  ContactsImportSchema,
+} from "./models/contactsImport";

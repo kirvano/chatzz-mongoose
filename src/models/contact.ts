@@ -75,6 +75,9 @@ const ContactSchema = new mongoose.Schema(
         isCompleted: { type: Boolean, default: false, required: true },
       },
     ],
+    onWhatsapp: { type: Boolean, default: false },
+    verified: { type: Boolean, default: false },
+    verifiedAt: { type: Date },
   },
   { timestamps: true }
 );
