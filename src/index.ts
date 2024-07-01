@@ -124,6 +124,18 @@ export {
 } from "./models/platformsLogs";
 
 export {
+  Resource,
+  ResourceSchema,
+  ResourceSchemaType,
+} from "./models/resource";
+
+export {
+  ResourceLogs,
+  ResourceLogsSchema,
+  ResourceLogsSchemaType,
+} from "./models/resourceLogs";
+
+export {
   ContactImportSchemaType,
   ContactsImport,
   ContactsImportSchema,
