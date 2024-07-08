@@ -11,6 +11,8 @@ const LabelConfigsSchema = new mongoose.Schema(
     helpLink: { type: String, default: "" },
     helpIcon: { type: String, default: "" },
     helpIconFloatShow: { type: Boolean, default: true },
+    disableUserRegistration: { type: Boolean, default: false },
+    disable: { type: Boolean, default: true },
     email: {
       user: { type: String, default: "" },
       password: { type: String, default: "" },
