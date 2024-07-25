@@ -57,3 +57,5 @@ export { PlatformLogs, PlatformLogsSchema, PlatformLogsSchemaType, } from "./mod
 export { Resource, ResourceSchema, ResourceSchemaType, } from "./models/resource";
 export { ResourceLogs, ResourceLogsSchema, ResourceLogsSchemaType, } from "./models/resourceLogs";
 export { ContactImportSchemaType, ContactsImport, ContactsImportSchema, } from "./models/contactsImport";
+export { UnhandledMessages, UnhandledMessagesSchema, UnhandledMessagesSchemaType, } from "./models/unhandledMessages";
+export { EventsLogs, EventsLogsSchema, EventsLogsSchemaType, } from "./models/eventsLogs";

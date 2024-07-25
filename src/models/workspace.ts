@@ -351,6 +351,7 @@ const WorkspaceSchema = new mongoose.Schema(
     },
     stripeCustomerId: { type: String }, // idCliente na Stripe
     instance: { type: String }, // idSession:userId
+    connectionState: { type: String },
     document: { type: String }, // CPF ou CNPJ
     email: { type: String },
     jid: { type: String },

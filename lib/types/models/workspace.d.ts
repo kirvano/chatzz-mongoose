@@ -276,6 +276,7 @@ declare const WorkspaceSchema: mongoose.Schema<any, mongoose.Model<any, any, any
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
+    connectionState?: string | undefined;
     document?: string | undefined;
     email?: string | undefined;
     jid?: string | undefined;
@@ -535,6 +536,7 @@ export declare const Workspace: mongoose.Model<{
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
+    connectionState?: string | undefined;
     document?: string | undefined;
     email?: string | undefined;
     jid?: string | undefined;
@@ -794,6 +796,7 @@ export declare const Workspace: mongoose.Model<{
     }) | undefined;
     stripeCustomerId?: string | undefined;
     instance?: string | undefined;
+    connectionState?: string | undefined;
     document?: string | undefined;
     email?: string | undefined;
     jid?: string | undefined;

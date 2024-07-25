@@ -140,3 +140,15 @@ export {
   ContactsImport,
   ContactsImportSchema,
 } from "./models/contactsImport";
+
+export {
+  UnhandledMessages,
+  UnhandledMessagesSchema,
+  UnhandledMessagesSchemaType,
+} from "./models/unhandledMessages";
+
+export {
+  EventsLogs,
+  EventsLogsSchema,
+  EventsLogsSchemaType,
+} from "./models/eventsLogs";
