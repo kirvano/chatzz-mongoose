@@ -25,6 +25,27 @@ const LabelConfigsSchema = new mongoose.Schema(
       txtName: { type: String, default: "" },
       txtValue: { type: String, default: "" },
     },
+    theme: {
+      primary: {
+        brand: {
+          solid: {
+            500: { type: String, default: "#2e8a43" },
+            450: { type: String, default: "#2e9947" },
+            400: { type: String, default: "#32a94e" },
+            350: { type: String, default: "#40b05a" },
+            300: { type: String, default: "#36ba55" },
+            200: { type: String, default: "#74d88b" },
+            100: { type: String, default: "#baedc6" },
+            50: { type: String, default: "#f0faf2" },
+          },
+          alpha: {
+            90: { type: String, default: "rgba(54, 191, 86, 0.2)" },
+            60: { type: String, default: "rgba(54, 191, 86, 0.14)" },
+            30: { type: String, default: "rgba(54, 191, 86, 0.08)" },
+          },
+        },
+      },
+    },
   },
   { timestamps: true }
 );

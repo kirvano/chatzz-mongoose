@@ -52,6 +52,27 @@ declare const LabelConfigsSchema: mongoose.Schema<any, mongoose.Model<any, any, 
         txtName: string;
         txtValue: string;
     } | undefined;
+    theme?: {
+        primary?: {
+            brand?: {
+                solid?: {
+                    500: string;
+                    450: string;
+                    400: string;
+                    350: string;
+                    300: string;
+                    200: string;
+                    100: string;
+                    50: string;
+                } | undefined;
+                alpha?: {
+                    90: string;
+                    60: string;
+                    30: string;
+                } | undefined;
+            } | undefined;
+        } | undefined;
+    } | undefined;
 }>;
 export type LabelConfigsSchemaType = mongoose.InferSchemaType<typeof LabelConfigsSchema>;
 export declare const LabelConfigs: mongoose.Model<{
@@ -81,6 +102,27 @@ export declare const LabelConfigs: mongoose.Model<{
         txtName: string;
         txtValue: string;
     } | undefined;
+    theme?: {
+        primary?: {
+            brand?: {
+                solid?: {
+                    500: string;
+                    450: string;
+                    400: string;
+                    350: string;
+                    300: string;
+                    200: string;
+                    100: string;
+                    50: string;
+                } | undefined;
+                alpha?: {
+                    90: string;
+                    60: string;
+                    30: string;
+                } | undefined;
+            } | undefined;
+        } | undefined;
+    } | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -109,6 +151,27 @@ export declare const LabelConfigs: mongoose.Model<{
         host: string;
         txtName: string;
         txtValue: string;
+    } | undefined;
+    theme?: {
+        primary?: {
+            brand?: {
+                solid?: {
+                    500: string;
+                    450: string;
+                    400: string;
+                    350: string;
+                    300: string;
+                    200: string;
+                    100: string;
+                    50: string;
+                } | undefined;
+                alpha?: {
+                    90: string;
+                    60: string;
+                    30: string;
+                } | undefined;
+            } | undefined;
+        } | undefined;
     } | undefined;
 }>>;
 export {};
