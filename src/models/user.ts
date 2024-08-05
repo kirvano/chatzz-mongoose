@@ -50,6 +50,10 @@ const UserSchema = new mongoose.Schema(
         },
       },
     ],
+    lastSeen: {
+      type: Date,
+      default: null,
+    },
     userAddress: {
       cep: { type: String },
       city: { type: String },

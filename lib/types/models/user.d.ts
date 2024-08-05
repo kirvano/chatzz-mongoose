@@ -44,6 +44,7 @@ declare const UserSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
         createdAt: Date;
         status: string;
     }[];
+    lastSeen: Date;
     passwordSetted: boolean;
     adminPermissions: string[];
     userId?: string | undefined;
@@ -85,6 +86,7 @@ export declare const User: mongoose.Model<{
         createdAt: Date;
         status: string;
     }[];
+    lastSeen: Date;
     passwordSetted: boolean;
     adminPermissions: string[];
     userId?: string | undefined;
@@ -126,6 +128,7 @@ export declare const User: mongoose.Model<{
         createdAt: Date;
         status: string;
     }[];
+    lastSeen: Date;
     passwordSetted: boolean;
     adminPermissions: string[];
     userId?: string | undefined;
