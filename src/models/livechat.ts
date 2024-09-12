@@ -33,6 +33,9 @@ const ChatSchema = new mongoose.Schema(
     jid: {
       type: String,
     },
+    workspaceJid: {
+      type: String,
+    },
     createdAt: {
       type: Date,
       default: Date.now,

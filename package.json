@@ -17,7 +17,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "mongoose": "^6.8.4"
+    "mongoose": "^6.8.4",
+    "mongoose-models": "file:"
   },
   "main": "lib/cjs/index.js",
   "types": "lib/types/index.d.ts",

@@ -48,6 +48,7 @@ declare const ChatSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any
     } | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    workspaceJid?: string | undefined;
 }>;
 export type ChatSchemaType = mongoose.InferSchemaType<typeof ChatSchema>;
 export declare const LiveChat: mongoose.Model<{
@@ -73,6 +74,7 @@ export declare const LiveChat: mongoose.Model<{
     } | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    workspaceJid?: string | undefined;
 }, {}, {}, {}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any>, {}, {}, {}, {}, mongoose.ResolveSchemaOptions<{
     timestamps: true;
 }>, {
@@ -98,5 +100,6 @@ export declare const LiveChat: mongoose.Model<{
     } | undefined;
     jid?: string | undefined;
     workspaceId?: mongoose.Types.ObjectId | undefined;
+    workspaceJid?: string | undefined;
 }>>;
 export {};
